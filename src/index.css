@@ -1,0 +1,349 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+  height: 4rem;
+  background-color: rgb(56, 56, 54);
+  color: white;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  font-size: 18px;
+}
+
+.home {
+  display: flex;
+  width: 100%;
+}
+
+.intro {
+  background-color: rgb(8, 8, 8);
+  padding: 1rem;
+}
+
+.intro h1 {
+  font-size: 45px;
+  color: white;
+}
+
+.intro h2 {
+  color: rgb(102, 102, 233);
+  overflow: hidden; 
+    white-space: nowrap; 
+    border-right: 0.15em solid #333;
+    font-size: 24px;
+    animation: typing 4s steps(40, end)infinite, blink-caret 0.75s step-end infinite;
+}
+
+.intro p {
+  color: white;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 60%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-right-color: transparent; }
+  50% { border-right-color: #333; }
+}
+
+.socials p {
+  color: rgb(102, 102, 233);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  color: blueviolet;
+}
+
+.picture img {
+  border-radius: 10%;
+}
+
+.details {
+ padding: 1rem;
+}
+
+.details p {
+  font-family: 'Roboto, sans-serif';
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+ background-image: url('./components/images/program-bg.png');
+ background-color: black;
+  border: 1px solid white;
+}
+
+.about h2 {
+  font-size: 30px;
+  font-family: 'Roboto, sans-serif';
+  color: white;
+}
+
+.resume a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Roboto, sans-serif';
+  font-weight: 700;
+}
+
+.about-right p {
+  color: white;
+  font-family: 'Roboto, sans-serif';
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.projects-container {
+  width: 100%;
+}
+
+.proj-title {
+  text-align: center;
+  font-family: 'Roboto, sans-serif';
+  font-size: 40px;
+}
+
+hr {
+  width: 90%;
+}
+
+.container {
+  width: 100%;
+  background-image: url('./components/images/program-bg.png');
+  padding: 10px 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  gap: 1rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  z-index: 10;
+  border-radius: 2%;
+  padding: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+}
+
+.image-div {
+  width: 70%;
+}
+
+.image-div img {
+  width: 100%;
+}
+
+.card-details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+.languages {
+  width: 80%;
+  padding: 0;
+}
+
+.languages .list a {
+  text-decoration: none;
+  border: 1px solid #8993a4;
+  margin-right: 5px;
+  border-radius: 4px;
+  color: white;
+  background-color:  rgb(102, 102, 233);
+  padding: 5px 14px;
+  font-family: 'Roboto, sans-serif';
+  font-weight: 500;
+  font-size: 23px
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+}
+
+.works-head h2 {
+  font-family: 'Roboto, sans-serif';
+  font-weight: 600;
+  align-items: center;
+  font-size: 40px;
+ color: rgb(102, 102, 233);
+  margin: 0;
+}
+
+.works-head p {
+  font-family: 'Roboto, sans-serif';
+  font-size: 25px;
+  font-weight: 400;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.clicks {
+  padding: 0;
+  width: 70%;
+  display: flex;
+  gap: 1rem;
+}
+
+.clicks li {
+  border: 1px #8993a4;
+  color: #fff;
+  background-color: #ff6b00;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.clicks li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.play-icon,
+.git-icon {
+  font-size: 25px;
+  }
+
+  .form-area {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .creator {
+    flex-basis: 40%;
+  }
+  
+  .form-area .creator h2 {
+    width: 70%;
+    font-family: 'Roboto, sans-serif';
+    font-weight: 700;
+    font-size: 32px;
+    font-style: normal;
+    color: #172b4d;
+    line-height: 44px;
+    text-align: start;
+    margin: 40px auto;
+  }
+
+  .form-right {
+    flex-grow: 1;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+  }
+  
+  form input {
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  textarea {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    font-family: 'Roboto, sans-serif';
+    font-style: italic;
+    font-size: 15px;
+    color: #3c3a39;
+  }
+  
+  .field button {
+    background-color: #ff6b00;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-start;
+      cursor: pointer;
+      width: 200px;
+      height: 40px;
+      text-align: center;
+  }
+  
+  form button:hover {
+    border-color: #f55800;
+    color: #f55800;
+    background-color: #fff5e1;
+  }
+  
+  form button:disabled {
+    border-color: #f4f1f0;
+    color: #5b5957;
+    background-color: #f4f1f0;
+  }
+  
+  form button:active {
+    color: #f4f1f0;
+    background-color: #e05304;
+  }
+  
+  .field button h5 {
+    font-family: 'Roboto, sans-serif';
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+  }
+  
