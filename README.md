@@ -79,7 +79,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
--This is my project [Live Demo Link]()
+-This is my project [Live Demo Link](https://portfolio-ha1s.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +99,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:cosywasswa/My-Portfolio-Desktop.git
+  git clone https://github.com/cosywasswa/Portfolio-react.git
 ```
 
 ### To run the project
