@@ -83,6 +83,10 @@ body {
   color: blueviolet;
 }
 
+.picture {
+  width: 70%;
+}
+
 .picture img {
   border-radius: 10%;
 }
