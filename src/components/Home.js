@@ -25,10 +25,10 @@ function Home() {
           </h1>
           <h2>I&apos;m a Full-stack software developer</h2>
           <p>
-            A passionate and innovative full-stack software developer.
+            A passionate and innovative full-stack software developer from Uganda.
             With love for all things tech, I thrive on turning ideas
             into reality through clean,
-            efficient, and user-centric code.. Changing the world.
+            efficient, and user-centric code.. Changing the world is my goal.
           </p>
           <div className="socials">
             <p>
