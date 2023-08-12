@@ -75,7 +75,9 @@ function Home() {
       </section>
       <section className="projects-container" id="projects">
         <h2 className="proj-title">
-          My Recent Projects
+          <code>
+            My Recent Projects
+          </code>
         </h2>
         <hr />
         <div className="container">
