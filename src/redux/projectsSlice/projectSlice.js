@@ -6,6 +6,7 @@ import image4 from '../../components/images/projects/desktop-bookstore.png';
 import image5 from '../../components/images/projects/desktop-traveller.png';
 import image6 from '../../components/images/projects/desktop-math.png';
 import image7 from '../../components/images/projects/desktop-todo.png';
+import image8 from '../../components/images/projects/desktop-awesome.png';
 
 const initialState = {
   projects: [{
@@ -93,6 +94,19 @@ const initialState = {
     image: image7,
     url1: 'https://cosywasswa.github.io/To-Do-List/dist/',
     url2: 'https://github.com/cosywasswa/To-Do-List',
+    languages: {
+      lan1: 'JavaScript',
+      lan2: 'CSS',
+      lan3: 'HTML',
+    },
+  },
+  {
+    id: 8,
+    title: 'Awesome Books',
+    description: 'Awesome Books is an application for adding new books to the list by Add button, removing books from the list using the remove button. Books list is stored in the local storage. The website is an SPA-Single Page Application. It displays the particular section accordingly when clicked on navigation bar and supports modules using ES6',
+    image: image8,
+    url1: 'https://cosywasswa.github.io/Awesome-books/',
+    url2: 'https://github.com/cosywasswa/Awesome-books',
     languages: {
       lan1: 'JavaScript',
       lan2: 'CSS',
