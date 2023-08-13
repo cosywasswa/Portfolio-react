@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { FaHandPointDown } from 'react-icons/fa';
 import pic from './images/my-pic.jpg';
@@ -11,6 +11,35 @@ import Item from './projectItem';
 
 function Home() {
   const { projects } = useSelector((store) => store.projectList);
+  useEffect(() => {
+    const form = document.querySelector('.form');
+    const email = document.querySelector('#email');
+    const name = document.querySelector('#full-name');
+    const error = document.querySelector('#submit-error');
+
+    if (form) {
+      const handleForm = (e) => {
+        const mail = email.value;
+        e.preventDefault();
+        if (mail === mail.toLowerCase() && name.value) {
+          form.submit();
+          if (error.querySelector('p')) {
+            error.removeChild(error.querySelector('p'));
+          }
+        } else {
+          const message = document.createElement('p');
+          message.textContent = 'Please fill in name and email in small letters';
+          error.appendChild(message);
+        }
+      };
+      form.addEventListener('submit', handleForm);
+      return () => {
+        form.removeEventListener('submit', handleForm);
+      };
+    }
+    return null;
+  }, []);
+
   return (
     <main>
       <section className="home">
@@ -36,11 +65,11 @@ function Home() {
               <FaHandPointDown />
             </p>
             <div className="icons">
-              <img src={github} alt="" />
-              <img src={linkedin} alt="" />
-              <img src={medium} alt="" />
-              <img src={angel} alt="" />
-              <img src={twitter} alt="" />
+              <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
+              <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer"><img src={linkedin} alt="Linkedln" /></a>
+              <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer"><img src={medium} alt="Medium" /></a>
+              <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer"><img src={angel} alt="Wellfound" /></a>
+              <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" /></a>
             </div>
           </div>
         </div>
