@@ -361,3 +361,7 @@ form button:active {
   font-size: 18px;
   color: #fff;
 }
+
+.submit-error p {
+  color: red;
+}
