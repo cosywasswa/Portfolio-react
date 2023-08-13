@@ -7,6 +7,12 @@ body {
 .nav-list a {
   text-decoration: none;
   color: white;
+  font-family: 'Lobster', cursive;
+  padding-right: 10px;
+}
+
+.nav-list .a1 {
+  border-right: 1px solid white;
 }
 
 .head {
