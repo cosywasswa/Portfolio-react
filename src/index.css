@@ -115,6 +115,7 @@ body {
   display: flex;
   gap: 10px;
   color: blueviolet;
+  margin-bottom: 20px;
 }
 
 .picture {
@@ -128,10 +129,10 @@ body {
 .details p {
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: white;
-  text-align:justify;
-  padding: 0 5rem;
+  text-align:center;
+  padding: 0 4rem;
 }
 
 .about {
@@ -146,11 +147,23 @@ body {
   border: 1px solid white;
 }
 
-.about h2 {
-  font-size: 30px;
+.about-left h2 {
+  position: relative;
+  left: 550px;
+  font-size: 35px;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color:  #e75b0a;
+  font-weight: 900;
   text-align: center;
+  background-color: white;
+  max-width: 200px;
+ 
+}
+
+.resume {
+  background-color: #e75b0a;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .resume a {
@@ -158,14 +171,14 @@ body {
   font-size: 20px;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
+  padding: 10px;
 }
 
 .about-right p {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  letter-spacing: 2px;
 }
 
 .projects-container {
@@ -427,4 +440,5 @@ form button:active {
 .devicon-ruby-plain-wordmark {
   font-size: 100px;
   padding-right: 20px;
+  z-index: 1;
 }

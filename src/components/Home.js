@@ -98,7 +98,6 @@ function Home() {
             </div>
           </div>
           <div className="quote">
-            <h3>Get inspired</h3>
             <p><code><span className="time" /></code></p>
             {quotes && quotes[0]
             && (
@@ -118,9 +117,10 @@ function Home() {
           <h2>About me</h2>
           <div className="details">
             <p>
-              Hello, i&apos;m a software developer, I can help you build a
-              proffessional website, feature. Look through some of my work and
-              experience and if you are pleased with my work, contact me.
+              &quot;Innovative software developer passionate about crafting elegant solutions.
+              Proficient in translating complex ideas into user-friendly applications.
+              Dedicated to continuous learning and staying updated with industry trends
+              Check out some of my work and feel free to connect with me&quot;
             </p>
           </div>
         </div>
@@ -147,10 +147,11 @@ function Home() {
 
             <i className="devicon-babel-plain" />
           </p>
-          <div className="resume">
-            <a className="res" href="https://github.com/cosywasswa">Get my resume</a>
-          </div>
+
           <div className="about-me-img" />
+        </div>
+        <div className="resume">
+          <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/edit?usp=sharing">See resume</a>
         </div>
       </section>
       <section className="projects-container" id="projects">
