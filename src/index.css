@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .nav-list a {
@@ -66,6 +67,33 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.into-p {
+ border-radius: 40px 20px 30px 90px;
+ border: 1px solid rgb(209, 91, 91);
+ animation: blink 1s infinite;
+ padding: 30px;
+}
+
+.time {
+  color: rgb(226, 218, 219);
+  font-size: 25px;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+}
+
+@keyframes blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(209, 91, 91); 
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
 @keyframes typing {
   from { width: 0; }
   to { width: 60%; }
@@ -97,23 +125,22 @@ body {
   border-radius: 10%;
 }
 
-.details {
-  padding: 1rem;
-}
-
 .details p {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
+  font-size: 26px;
+  letter-spacing: 1px;
   color: white;
+  text-align:justify;
+  padding: 0 5rem;
 }
 
 .about {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1rem;
   background-image: url('./components/images/program-bg.png');
   background-color: black;
   border: 1px solid white;
@@ -123,6 +150,7 @@ body {
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
   color: white;
+  text-align: center;
 }
 
 .resume a {
@@ -364,4 +392,39 @@ form button:active {
 
 .submit-error p {
   color: red;
+}
+
+.quote {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote p {
+  color: white;
+  font-size: 15px;
+}
+
+.quote h3 {
+  text-align: left;
+  color:rgb(102, 102, 233);
+  font-family: 'Roboto', sans-serif;
+}
+
+.quote-p {
+  margin-top: -2rem;
+}
+
+.devicon-babel-plain,
+.devicon-html5-plain-wordmark,
+.devicon-postgresql-plain,
+.devicon-bootstrap-plain-wordmark,
+.devicon-react-original-wordmark,
+.devicon-css3-plain,
+.devicon-sass-original,
+.devicon-redux-original,
+.devicon-javascript-plain,
+.devicon-ruby-plain-wordmark {
+  font-size: 100px;
+  padding-right: 20px;
 }

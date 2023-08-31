@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import image1 from '../../components/images/projects/desktop-crypto.png';
 import image2 from '../../components/images/projects/desktop-planet.png';
 import image3 from '../../components/images/projects/desktop-vidvib.png';
@@ -7,6 +7,22 @@ import image5 from '../../components/images/projects/desktop-traveller.png';
 import image6 from '../../components/images/projects/desktop-math.png';
 import image7 from '../../components/images/projects/desktop-todo.png';
 import image8 from '../../components/images/projects/desktop-awesome.png';
+
+const url = 'https://api.api-ninjas.com/v1/quotes?category=inspirational';
+
+export const fetchquote = createAsyncThunk('quotes/fetchquotes', async (thunkAPI) => {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'X-Api-Key': '26cTkE83PIO43lDAytQOnA==cF1QVP0FKktXURwi',
+      },
+    });
+    const quoteData = await response.json();
+    return quoteData;
+  } catch (error) {
+    return thunkAPI.rejectWithValue('something went wrong');
+  }
+});
 
 const initialState = {
   projects: [{
@@ -114,6 +130,8 @@ const initialState = {
     },
   },
   ],
+  quotes: [],
+  isLoading: false,
 };
 
 const projectSlice = createSlice({
@@ -121,6 +139,15 @@ const projectSlice = createSlice({
   initialState,
   reducers: {
 
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchquote.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(fetchquote.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.quotes = action.payload;
+    });
   },
 });
 
