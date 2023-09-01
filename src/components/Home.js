@@ -122,6 +122,9 @@ function Home() {
               Dedicated to continuous learning and staying updated with industry trends
               Check out some of my work and feel free to connect with me&quot;
             </p>
+            <p className="stack">
+              <code>Tech-stack</code>
+            </p>
           </div>
         </div>
         <div className="about-right">

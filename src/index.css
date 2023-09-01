@@ -24,7 +24,6 @@ body {
   align-items: center;
   height: 4rem;
   background-color: black;
-  border: 2px solid rgb(29, 114, 26);
   color: white;
 }
 
@@ -43,6 +42,7 @@ body {
 }
 
 .intro {
+  background-image: url('./components/images/back3.jpg');
   background-color: rgb(54, 51, 51);
   padding: 1rem;
 }
@@ -69,16 +69,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.into-p {
- border-radius: 40px 20px 30px 90px;
- border: 1px solid rgb(209, 91, 91);
- /* animation: blink 1s infinite; */
- padding: 30px;
-}
-
 .time {
   color: rgb(226, 218, 219);
-  font-size: 25px;
+  font-size: 20px;
   position: absolute;
   top: 120px;
   right: 20px;
@@ -117,7 +110,7 @@ body {
   display: flex;
   gap: 10px;
   color: blueviolet;
-  margin-bottom: 20px;
+  margin-block: 50px;
 }
 
 .picture {
@@ -130,11 +123,15 @@ body {
 
 .details p {
   font-family: 'Roboto', sans-serif;
-  font-size: 26px;
+  font-size: 23px;
   letter-spacing: 0.5px;
   color: white;
   text-align:center;
   padding: 0 4rem;
+}
+
+.details .stack {
+  font-size: 35px;
 }
 
 .about {
