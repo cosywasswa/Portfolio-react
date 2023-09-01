@@ -8,7 +8,8 @@ body {
 .nav-list a {
   text-decoration: none;
   color: white;
-  font-family: 'Lobster', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   padding-right: 10px;
 }
 
@@ -22,7 +23,8 @@ body {
   padding: 0 2rem;
   align-items: center;
   height: 4rem;
-  background-color: rgb(42, 10, 224);
+  background-color: black;
+  border: 2px solid rgb(29, 114, 26);
   color: white;
 }
 
@@ -41,7 +43,7 @@ body {
 }
 
 .intro {
-  background-color: rgb(8, 8, 8);
+  background-color: rgb(54, 51, 51);
   padding: 1rem;
 }
 
@@ -70,7 +72,7 @@ body {
 .into-p {
  border-radius: 40px 20px 30px 90px;
  border: 1px solid rgb(209, 91, 91);
- animation: blink 1s infinite;
+ /* animation: blink 1s infinite; */
  padding: 30px;
 }
 
