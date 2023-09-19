@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   useEffect(() => {
@@ -24,11 +26,12 @@ const NavBar = () => {
     <header className="head">
       <h3>Logo</h3>
       <ul className="nav-list">
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="#about">About</NavLink></li>
-        <li><NavLink to="#projects">Projects</NavLink></li>
+        <li><NavLink to="/" className="a1">Home</NavLink></li>
+        <li><NavLink to="#about" className="a1"> About</NavLink></li>
+        <li><NavLink to="#projects" className="a1">Projects</NavLink></li>
         <li><NavLink to="#contact">Contact</NavLink></li>
       </ul>
+      <FontAwesomeIcon icon={faBars} className="bars" />
     </header>
   );
 };

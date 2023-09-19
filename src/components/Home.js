@@ -1,6 +1,7 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { FaHandPointDown } from 'react-icons/fa';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
+import { fetchquote } from '../redux/projectsSlice/projectSlice';
 import pic from './images/my-pic.jpg';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
 import angel from './images/SOCIAL1/angel.svg';
@@ -10,7 +11,58 @@ import twitter from './images/SOCIAL1/twitter.svg';
 import Item from './projectItem';
 
 function Home() {
-  const { projects } = useSelector((store) => store.projectList);
+  const dispatch = useDispatch();
+  const { projects, quotes, isLoading } = useSelector((store) => store.projectList);
+  useEffect(() => {
+    dispatch(fetchquote());
+    if (isLoading) {
+      return (
+        <p />
+      );
+    }
+    const form = document.querySelector('.form');
+    const email = document.querySelector('#email');
+    const name = document.querySelector('#full-name');
+    const error = document.querySelector('#submit-error');
+
+    if (form) {
+      const handleForm = (e) => {
+        const mail = email.value;
+        e.preventDefault();
+        if (mail === mail.toLowerCase() && name.value) {
+          form.submit();
+          if (error.querySelector('p')) {
+            error.removeChild(error.querySelector('p'));
+          }
+        } else {
+          const message = document.createElement('p');
+          message.textContent = 'Please fill in name and email in small letters';
+          error.appendChild(message);
+        }
+      };
+      form.addEventListener('submit', handleForm);
+      return () => {
+        form.removeEventListener('submit', handleForm);
+      };
+    }
+    return null;
+  }, [dispatch]);
+  window.onload = () => {
+    const currenTime = () => {
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth() + 1;
+      const day = currentDate.getDate();
+      const hours = currentDate.getHours();
+      const mins = currentDate.getMinutes();
+      const fullDate = `${year}-${month}-${day} ${hours}:${mins}`;
+      const display = document.querySelector('.time');
+      display.textContent = fullDate;
+    };
+
+    currenTime();
+    setInterval(currenTime, 1000);
+  };
   return (
     <main>
       <section className="home">
@@ -24,24 +76,39 @@ function Home() {
             I&apos;m Cosmas.
           </h1>
           <h2>I&apos;m a Full-stack software developer</h2>
-          <p>
-            A passionate and innovative full-stack software developer from Uganda.
-            With love for all things tech, I thrive on turning ideas
-            into reality through clean,
-            efficient, and user-centric code.. Changing the world is my goal.
-          </p>
+          <div className="into-p">
+            <p>
+              A passionate and innovative full-stack software developer from Uganda.
+              With love for all things tech, I thrive on turning ideas
+              into reality through clean,
+              efficient, and user-centric code.. Changing the world is my goal.
+            </p>
+          </div>
           <div className="socials">
             <p>
               Connect with me
               <FaHandPointDown />
             </p>
             <div className="icons">
-              <img src={github} alt="" />
-              <img src={linkedin} alt="" />
-              <img src={medium} alt="" />
-              <img src={angel} alt="" />
-              <img src={twitter} alt="" />
+              <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
+              <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer"><img src={linkedin} alt="Linkedln" /></a>
+              <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer"><img src={medium} alt="Medium" /></a>
+              <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer"><img src={angel} alt="Wellfound" /></a>
+              <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" /></a>
             </div>
+          </div>
+          <div className="quote">
+            <p><code><span className="time" /></code></p>
+            {quotes && quotes[0]
+            && (
+            <p className="quote-p">
+              <FaHandPeace />
+              <code>
+                {quotes[0].quote}
+              </code>
+              <FaHandPeace />
+            </p>
+            )}
           </div>
         </div>
       </section>
@@ -50,27 +117,44 @@ function Home() {
           <h2>About me</h2>
           <div className="details">
             <p>
-              Hello, i&apos;m a software developer, I can help you build a
-              proffessional website, feature. Look through some of my work and
-              experience and if you are pleased with my work, contact me.
+              &quot;Innovative software developer passionate about crafting elegant solutions.
+              Proficient in translating complex ideas into user-friendly applications.
+              Dedicated to continuous learning and staying updated with industry trends
+              Check out some of my work and feel free to connect with me&quot;
+            </p>
+            <p className="stack">
+              <code>Tech-stack</code>
             </p>
           </div>
         </div>
         <div className="about-right">
-          <h2>SKILLS</h2>
           <p>
-            I have knowledge in the following fields
-            Front-end: JavaScript, ReactJS, Redux, HTML5,
-            Additional knowledge: Java, Restful APIs
-            Styling: CSS, Sass, Bootstrap
-            Testing: Jest, React Testing Library,
-            Version Control: Git
-            Development platforms: GitHub, Jira (Kanban boards), GitFlow, Linters
+
+            <i className="devicon-html5-plain-wordmark colored" />
+
+            <i className="devicon-postgresql-plain colored" />
+
+            <i className="devicon-bootstrap-plain-wordmark colored" />
+
+            <i className="devicon-react-original-wordmark colored" />
+
+            <i className="devicon-css3-plain" />
+
+            <i className="devicon-sass-original" />
+
+            <i className="devicon-redux-original" />
+
+            <i className="devicon-javascript-plain" />
+
+            <i className="devicon-ruby-plain-wordmark colored" />
+
+            <i className="devicon-babel-plain" />
           </p>
-          <div className="resume">
-            <a className="res" href="https://github.com/cosywasswa">Get my resume</a>
-          </div>
+
           <div className="about-me-img" />
+        </div>
+        <div className="resume">
+          <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/edit?usp=sharing">See resume</a>
         </div>
       </section>
       <section className="projects-container" id="projects">
