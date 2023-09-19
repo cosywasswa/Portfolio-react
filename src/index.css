@@ -1,3 +1,21 @@
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .picture {
+    display: none;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+}
+@media only screen and (min-width: 768px) {
 body {
   margin: 0;
   padding: 0;
@@ -15,6 +33,10 @@ body {
 
 .nav-list .a1 {
   border-right: 1px solid white;
+}
+
+.bars {
+  display: none;
 }
 
 .head {
@@ -440,4 +462,5 @@ form button:active {
   font-size: 100px;
   padding-right: 20px;
   z-index: 1;
+}
 }
