@@ -22,7 +22,7 @@
     background-color: rgb(85, 77, 82);
     height: 4rem;
     position: fixed;
-    width: 100%;
+    width: 95%;
     margin-bottom: 100px;
   }
 
@@ -34,7 +34,7 @@
   .bars {
     color: white;
     font-size: 25px;
-    padding-right: 30px;
+    /* padding-right: 30px; */
   }
 
   .home {
