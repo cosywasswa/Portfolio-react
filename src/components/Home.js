@@ -129,26 +129,28 @@ function Home() {
         </div>
         <div className="about-right">
           <p>
+            <div className="icon-div">
+              <i className="devicon-html5-plain-wordmark colored" />
 
-            <i className="devicon-html5-plain-wordmark colored" />
+              <i className="devicon-postgresql-plain colored" />
 
-            <i className="devicon-postgresql-plain colored" />
+              <i className="devicon-bootstrap-plain-wordmark colored" />
 
-            <i className="devicon-bootstrap-plain-wordmark colored" />
+              <i className="devicon-react-original-wordmark colored" />
 
-            <i className="devicon-react-original-wordmark colored" />
+              <i className="devicon-css3-plain" />
 
-            <i className="devicon-css3-plain" />
+              <i className="devicon-sass-original" />
 
-            <i className="devicon-sass-original" />
+              <i className="devicon-redux-original" />
 
-            <i className="devicon-redux-original" />
+              <i className="devicon-javascript-plain" />
 
-            <i className="devicon-javascript-plain" />
+              <i className="devicon-ruby-plain-wordmark colored" />
 
-            <i className="devicon-ruby-plain-wordmark colored" />
+              <i className="devicon-babel-plain" />
 
-            <i className="devicon-babel-plain" />
+            </div>
           </p>
 
           <div className="about-me-img" />
