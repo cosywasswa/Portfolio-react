@@ -79,7 +79,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
--This is my project [Live Demo Link](https://portfolio-ha1s.onrender.com/)
+-This is my project [Live Demo Link](https://cosmas-portfolio.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
