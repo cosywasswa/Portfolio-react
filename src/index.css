@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap");
 @media only screen and (max-width: 768px) {
   body {
     margin: 0;
@@ -53,6 +55,7 @@
     color: white;
     line-height: 44px;
     text-align: start;
+    font-family: 'Playfair Display', sans-serif;
   }
 
   .nav-head {
@@ -64,12 +67,12 @@
     height: 4rem;
     position: fixed;
     width: 95%;
-    margin-bottom: 100px;
   }
 
   .head h3 {
     color: white;
     font-size: 25px;
+    font-family: 'Playfair Display', sans-serif;
   }
 
   .bars {
@@ -85,21 +88,47 @@
   }
 
   .intro h1 {
-    font-size: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+    font-family: 'Playfair Display', sans-serif;
   }
 
   .intro h2 {
-    font-size: 23px;
+    font-size: 27px;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
-    color: #e75b0a;
+    font-family: 'Playfair Display', sans-serif;
+    color: rgb(102, 102, 233);
+  }
+
+  .my-languages {
+    color: rgb(102, 102, 233);
+  }
+
+  @keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-10deg); }
+    40% { transform: rotate(12deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(9deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .waving {
+    display: inline-block;
+    animation-name: wave-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .full-names {
+    color: rgb(102, 102, 233);
+    font-size: 35px;
   }
 
   .into-p {
-    font-size: 19px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
     text-align: left;
+    padding-bottom: 20px;
   }
 
   .socials p {
@@ -120,21 +149,27 @@
   }
 
   .time {
-    position: fixed;
-    top: 1.5rem;
-    right: 8rem;
-    font-size: 15px;
+   display: none;
   }
 
   .quote-p {
-    font-size: 16px;
-    margin: 0;
-    padding-bottom: 10px;
+   display: none;
   }
 
   .about {
     padding: 2rem 1rem;
     background-color: #eff2f7;
+  }
+
+  .about h2 {
+    color: #e75b0a;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    border: 1px solid white;
+    background-color: white;
+    font-size: 35px;
+    margin: 0 -20px;
   }
 
   .about-left h2 {
@@ -146,19 +181,42 @@
   }
 
   .details p {
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Titillium Web', sans-serif;
   }
 
   .details .stack {
-    font-size: 32px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
     color: #e75b0a;
+    display: flex;
   }
 
   .about-right {
     width: 100%;
   }
+
+  .technologies-list {
+    margin-left: 20px;
+  }
+
+  .list-stacks {
+    list-style: none;
+    color: rgb(102, 102, 233);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-left: -3.5rem;
+    gap: 10px;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+.fa-check-circle {
+  padding-right: 10px;
+  color: #e75b0a;
+}
 
   .icon-div {
     display: flex;
@@ -166,22 +224,24 @@
     justify-content: center;
     gap: 1rem;
     font-size: 45px;
+    margin-bottom: 30px;
   }
 
   .resume {
     background-color: #e75b0a;
-    width: 130px;
+    width: 200px;
     display: flex;
     justify-content: center;
     padding: 7px;
     border-radius: 10px;
+    margin: auto;
   }
 
   .resume .res {
-    font-size: 23px;
+    font-size: 25px;
     text-decoration: none;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
   }
 
   .projects-container {
@@ -199,7 +259,7 @@
     text-align: center;
     font-size: 35px;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 700;
     letter-spacing: normal;
   }
@@ -241,7 +301,8 @@
     text-decoration: none;
     padding: 5px 10px;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
+    font-family: 'Playfair Display', sans-serif;
   }
 
   .languages .list a {
@@ -252,7 +313,7 @@
     color: white;
     background-color: rgb(102, 102, 233);
     padding: 5px 14px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
     font-size: 20px;
   }
@@ -266,7 +327,7 @@
   }
 
   .works-head h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 600;
     text-align: center;
     font-size: 40px;
@@ -275,9 +336,9 @@
   }
 
   .works-head p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     width: 90%;
     padding: 5px;
     border: 0.5px solid rgb(211, 209, 207);
@@ -287,6 +348,10 @@
     padding: 0;
     display: flex;
     gap: 1rem;
+  }
+
+  .visit {
+    margin: 0 10px;
   }
 
   .clicks li {
@@ -314,7 +379,7 @@
   }
 
   .form-area .creator h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 700;
     font-size: 32px;
     font-style: normal;
@@ -339,15 +404,17 @@
     border-bottom: 1px solid grey;
     width: 100%;
     padding: 15px;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
   }
 
   textarea {
     width: 100%;
     outline: 0;
     border: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-style: italic;
-    font-size: 15px;
+    font-size: 25px;
     color: #3c3a39;
   }
 
@@ -361,6 +428,7 @@
     height: 45px;
     text-align: center;
     border-radius: 5px;
+    font-family: 'Playfair Display', sans-serif;
   }
 
   form button:hover {
@@ -381,9 +449,9 @@
   }
 
   .field button h5 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     color: #fff;
   }
 
@@ -407,9 +475,10 @@
   .nav-list a {
     text-decoration: none;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     font-size: 20px;
     padding-right: 10px;
+    font-family: 'Titillium Web, sans-serif';
   }
 
   .nav-list .a1 {
@@ -426,8 +495,15 @@
     padding: 0 2rem;
     align-items: center;
     height: 4rem;
-    background-color: rgb(45, 14, 218);
-    color: white;
+    background-color: rgb(38, 35, 35);
+    color: rgb(255, 255, 255);
+  }
+
+  .nav-head h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    font-family: 'Titillium Web, sans-serif';
   }
 
   .nav-list {
@@ -442,6 +518,9 @@
   .home {
     display: flex;
     width: 100%;
+    background-color: rgb(54, 51, 51);
+    gap: 3rem;
+    padding-bottom: 3rem;
   }
 
   .intro {
@@ -449,10 +528,25 @@
     padding: 1rem;
   }
 
-  .intro h1 {
+  .myname {
+    color: white; 
+    font-size: 50px;
+    font-family: 'Playfair Display, sans-serif';
+  }
+
+  .full-names {
+    color: rgb(102, 102, 233); 
+    font-family: 'Playfair Display', sans-serif;
+  }
+
+  .my-languages {
+    color: rgb(102, 102, 233);
+  }
+
+  .h1 .hey {
     font-size: 45px;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
   }
 
   .intro h2 {
@@ -460,15 +554,16 @@
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid #333;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
     animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
   }
 
-  .intro p {
+  .into-p {
     color: white;
-    font-size: 17px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
   }
 
   .time {
@@ -477,6 +572,10 @@
     position: absolute;
     top: 120px;
     right: 20px;
+  }
+
+  .quote p {
+    display: none;
   }
 
   @keyframes blink {
@@ -495,7 +594,7 @@
 
   @keyframes typing {
     from { width: 0; }
-    to { width: 60%; }
+    to { width: 80%; }
   }
 
   @keyframes blink-caret {
@@ -504,33 +603,61 @@
     50% { border-right-color: #333; }
   }
 
+  @keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-10deg); }
+    40% { transform: rotate(12deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(9deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .waving {
+    display: inline-block;
+    animation-name: wave-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
   .socials p {
     color: rgb(102, 102, 233);
     font-size: 20px;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icons img {
+    width: 30px;
   }
 
   .icons {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 30px;
     color: blueviolet;
-    margin-block: 50px;
+    font-size: 30px;
   }
 
   .picture {
-    width: 70%;
+    background-color: rgb(54, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
   }
 
-  .picture img {
-    border-radius: 10%;
+  .picture .pic {
+    width: 300px;
+    border-radius: 100%;
+    margin-left: 2rem;
   }
 
   .details p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 23px;
-    letter-spacing: 0.5px;
     color: white;
-    text-align: center;
     padding: 0 4rem;
   }
 
@@ -545,22 +672,60 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-image: url('./components/images/program-bg.png');
-    background-color: black;
-    border: 1px solid white;
+    background-color: rgb(54, 51, 51);
+    border-top: 1px solid white;
   }
 
-  .about-left h2 {
-    position: relative;
-    left: 550px;
+  .about h2 {
     font-size: 35px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     color: #e75b0a;
     font-weight: 900;
     text-align: center;
     background-color: white;
     max-width: 200px;
+    padding: 10px;
+    border-radius: 10px;
   }
+
+  .about-left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-right {
+    background-color: rgb(250, 244, 244);
+    border-radius: 30px;
+    padding: 10px;
+  }
+
+  .technologies-list {
+    margin-left: 20px;
+  }
+
+  .list-stacks {
+    list-style: none;
+    color: rgb(102, 102, 233);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+.fa-check-circle {
+  padding-right: 10px;
+  color: #e75b0a;
+}
 
   .resume {
     background-color: #e75b0a;
@@ -572,15 +737,14 @@
     color: white;
     font-size: 20px;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
     padding: 10px;
   }
 
-  .about-right p {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+  .icon-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .projects-container {
@@ -589,7 +753,7 @@
 
   .proj-title {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 700;
     font-size: 50px;
     color: rgb(102, 102, 233);

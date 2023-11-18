@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
+import '@fortawesome/fontawesome-free/css/all.css';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
-import pic from './images/my-pic.jpg';
+import profile from './images/my pic-bk.jpg';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
 import angel from './images/SOCIAL1/angel.svg';
 import github from './images/SOCIAL1/github.svg';
@@ -67,35 +68,45 @@ function Home() {
     <main>
       <section className="home">
         <div className="picture">
-          <img src={pic} alt="" />
+          <div className="icons">
+            <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
+            <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer"><img src={linkedin} alt="Linkedln" /></a>
+            <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer"><img src={medium} alt="Medium" /></a>
+            <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer"><img src={angel} alt="Wellfound" /></a>
+            <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" /></a>
+          </div>
+          <img src={profile} alt="" className="pic" />
         </div>
         <div className="intro">
-          <h1>
-            Hey There.
-            <br />
-            I&apos;m Cosmas.
-          </h1>
-          <h2>I&apos;m a Full-stack software developer</h2>
+          <div className="h1">
+            <h1 className="hey">
+              Hey There
+              <span className="waving">
+                👋🏻
+              </span>
+              <br />
+            </h1>
+            <h1 className="myname">
+              IAM
+              <strong className="full-names"> Cosmas Wasswa</strong>
+            </h1>
+          </div>
+          <h2>I&apos;m a Full-stack software developer from Uganda</h2>
           <div className="into-p">
             <p>
-              A passionate and innovative full-stack software developer from Uganda.
-              With love for all things tech, I thrive on turning ideas
-              into reality through clean,
-              efficient, and user-centric code.. Changing the world is my goal.
+              Experienced in crafting web applications using languages like
+              <strong className="my-languages">
+                {' '}
+                Ruby on Rails,
+                React, Ruby, JavaScript, HTML5, CSS3, and tailwing CSS
+                {' '}
+              </strong>
+              I enjoy creating websites that work well on any device
+              and give users a great experience.
+              Keeping up with new tech is my jam,
+              and I&apos;m dedicated to using my skills to make awesome,
+              top-notch projects that businesses and people love.
             </p>
-          </div>
-          <div className="socials">
-            <p>
-              Connect with me
-              <FaHandPointDown />
-            </p>
-            <div className="icons">
-              <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
-              <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer"><img src={linkedin} alt="Linkedln" /></a>
-              <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer"><img src={medium} alt="Medium" /></a>
-              <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer"><img src={angel} alt="Wellfound" /></a>
-              <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" /></a>
-            </div>
           </div>
           <div className="quote">
             <p><code><span className="time" /></code></p>
@@ -113,22 +124,64 @@ function Home() {
         </div>
       </section>
       <section className="about" id="about">
-        <div className="about-left">
-          <h2>About me</h2>
-          <div className="details">
-            <p>
-              &quot;Innovative software developer passionate about crafting elegant solutions.
-              Proficient in translating complex ideas into user-friendly applications.
-              Dedicated to continuous learning and staying updated with industry trends
-              Check out some of my work and feel free to connect with me&quot;
-            </p>
-            <p className="stack">
-              <code>Tech-stack</code>
-            </p>
+        <h2>About me</h2>
+        <div className="about-container">
+          <div className="about-left">
+            <div className="details">
+              <p>
+                As an innovative Full-stack software developer,
+                I love solving problems and creating great projects.
+                I see challenges as opportunities to grow and improve continuously.
+                I&apos;m dedicated to making top-notch solutions that make
+                a real difference in the digital world
+                I have spent all my journey coding collaboratively with different
+                people across the globe.
+                My ability to think outside the box and approach problems with
+                innovative solutions is what differentiates me.
+                I have managed to build, and deploy more than 30 projects
+                using the different stacks and also acquired numerous certifications
+              </p>
+              <p className="stack">
+                <code>
+                  Current Tech-stacks
+                  <FaHandPointDown className="fa-check-circle" />
+                </code>
+              </p>
+              <div className="technologies-list">
+                <ul className="list-stacks">
+                  <div>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      React JS
+                    </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      Ruby / Rails
+                    </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      JavaScript
+                    </li>
+                  </div>
+                  <div>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      HTML5 / CSS3
+                    </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      Tailwind CSS
+                    </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      PostgreSQL
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="about-right">
-          <p>
+          <div className="about-right">
             <div className="icon-div">
               <i className="devicon-html5-plain-wordmark colored" />
 
@@ -151,20 +204,19 @@ function Home() {
               <i className="devicon-babel-plain" />
 
             </div>
-          </p>
-
-          <div className="about-me-img" />
+            <div className="about-me-img" />
+          </div>
         </div>
         <div className="resume">
-          <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/edit?usp=sharing">See resume</a>
+          <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/export?format=pdf">Download resume</a>
         </div>
       </section>
       <section className="projects-container" id="projects">
-        <h2 className="proj-title">
+        <h1 className="proj-title">
           <code>
             My Recent Projects
           </code>
-        </h2>
+        </h1>
         <hr />
         <div className="container">
           {projects.map((project) => (
