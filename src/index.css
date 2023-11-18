@@ -476,7 +476,7 @@
     text-decoration: none;
     color: white;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
     padding-right: 10px;
     font-family: 'Titillium Web, sans-serif';
   }
@@ -490,6 +490,8 @@
   }
 
   .nav-head {
+    position: fixed;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
@@ -497,10 +499,10 @@
     height: 4rem;
     background-color: rgb(38, 35, 35);
     color: rgb(255, 255, 255);
+    z-index: 10;
   }
 
   .nav-head h3 {
-    font-family: 'Roboto', sans-serif;
     font-style: italic;
     font-size: 28px;
     font-family: 'Titillium Web, sans-serif';
@@ -521,6 +523,7 @@
     background-color: rgb(54, 51, 51);
     gap: 3rem;
     padding-bottom: 3rem;
+    padding-top: 20px;
   }
 
   .intro {
@@ -554,6 +557,7 @@
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid #333;
+    margin-top: -12rem;
     font-size: 30px;
     font-family: 'Titillium Web', sans-serif;
     animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
@@ -654,6 +658,40 @@
     margin-left: 2rem;
   }
 
+  .round-shape {
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 50% 50%;
+    background-color: rgb(154, 154, 169);
+    position: relative;
+    bottom: 35%;
+    left: 87%;
+    transition: transform 0.3s ease;
+    filter: blur(4px);
+    z-index: 10;
+  }
+
+  .round-shape2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 50% 50%;
+    background-color: rgb(154, 154, 169);
+    position: relative;
+    top: 20%;
+    right: 50%;
+    transition: transform 0.3s ease;
+    filter: blur(4px);
+    z-index: 10;
+  }
+
+  .round-shape:hover {
+    transform: scale(1.2) translateY(-25%);
+  }
+
+  .round-shape2:hover {
+    transform: scale(1.2) translateY(25%);
+  }
+
   .details p {
     font-family: 'Titillium Web', sans-serif;
     font-size: 23px;
@@ -680,7 +718,7 @@
     font-size: 35px;
     font-family: 'Playfair Display', sans-serif;
     color: #e75b0a;
-    font-weight: 900;
+    font-weight: 700;
     text-align: center;
     background-color: white;
     max-width: 200px;
@@ -731,6 +769,7 @@
     background-color: #e75b0a;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 2rem;
   }
 
   .resume a {
@@ -786,7 +825,7 @@
   }
 
   .card-container:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
 
   .image-div {

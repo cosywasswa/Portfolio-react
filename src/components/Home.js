@@ -66,7 +66,7 @@ function Home() {
   };
   return (
     <main>
-      <section className="home">
+      <section className="home" id="home">
         <div className="picture">
           <div className="icons">
             <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
@@ -91,6 +91,8 @@ function Home() {
               <strong className="full-names"> Cosmas Wasswa</strong>
             </h1>
           </div>
+          <div className="round-shape" />
+          <div className="round-shape2" />
           <h2>I&apos;m a Full-stack software developer from Uganda</h2>
           <div className="into-p">
             <p>
