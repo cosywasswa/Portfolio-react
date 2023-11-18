@@ -815,6 +815,7 @@
     padding: 5px 10px;
     color: white;
     font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
   }
 
   .languages .list a {
@@ -825,7 +826,7 @@
     color: white;
     background-color: rgb(102, 102, 233);
     padding: 5px 14px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
     font-size: 23px;
   }
@@ -839,7 +840,7 @@
   }
 
   .works-head h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 600;
     align-items: center;
     font-size: 40px;
@@ -848,7 +849,7 @@
   }
 
   .works-head p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 25px;
     font-weight: 400;
     width: 100%;
@@ -892,7 +893,7 @@
 
   .form-area .creator h2 {
     width: 70%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
     font-size: 32px;
     font-style: normal;
@@ -919,17 +920,19 @@
     outline: 0;
     border: 0;
     border-bottom: 1px solid grey;
+    font-family: 'Titillium Web', sans-serif;
     width: 100%;
     padding: 15px;
+    font-size: 25px;
   }
 
   textarea {
     width: 100%;
     outline: 0;
     border: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-style: italic;
-    font-size: 15px;
+    font-size: 25px;
     color: #3c3a39;
   }
 
@@ -963,9 +966,9 @@
   }
 
   .field button h5 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
     color: #fff;
   }
 
