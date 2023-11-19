@@ -66,12 +66,15 @@
     background-color: rgb(85, 77, 82);
     height: 4rem;
     position: fixed;
-    width: 95%;
+    width: 93%;
   }
 
   .head h3 {
     color: white;
     font-size: 25px;
+    font-style: italic;
+    background-color: #000308;
+    padding: 0 10px;
     font-family: 'Playfair Display', sans-serif;
   }
 
@@ -83,7 +86,7 @@
   .home {
     background-color: rgb(51, 46, 46);
     color: white;
-    padding: 0 1rem;
+    padding: 10px 1rem;
     padding-top: 4rem;
   }
 
@@ -115,7 +118,7 @@
   .waving {
     display: inline-block;
     animation-name: wave-animation;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
   }
 
@@ -458,6 +461,13 @@
   .submit-error p {
     color: red;
   }
+
+  .footer {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Playfair Display', sans-serif;
+    padding-bottom: 10px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -746,6 +756,11 @@
     padding: 10px;
   }
 
+  .about-right:hover {
+    transform: scale(1) translateX(-5%);
+    background-color: rgb(181, 177, 177);
+  }
+
   .technologies-list {
     margin-left: 20px;
   }
@@ -770,6 +785,10 @@
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 2rem;
+  }
+
+  .resume:hover {
+    transform: scale(1.1) translateY(-8%)
   }
 
   .resume a {
@@ -1049,5 +1068,11 @@
     font-size: 100px;
     padding-right: 20px;
     z-index: 1;
+  }
+
+  .footer {
+    margin-left: 100px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
   }
 }

@@ -30,7 +30,7 @@ const NavBar = () => {
   return (
     <header className="head">
       <nav className="nav-head">
-        <h3>Cosmas</h3>
+        <h3>CW</h3>
         <ul className="nav-list">
           <li><NavLink to="#home" className="a1">Home</NavLink></li>
           <li><NavLink to="#about" className="a1"> About</NavLink></li>

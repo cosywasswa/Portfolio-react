@@ -285,6 +285,9 @@ function Home() {
           </form>
         </div>
       </section>
+      <div className="footer">
+        <p>Copyright © Cosmas Wasswa 2023 All rights Reserved</p>
+      </div>
     </main>
   );
 }
