@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 import '@fortawesome/fontawesome-free/css/all.css';
+import emailjs from '@emailjs/browser';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
 import profile from './images/my pic-bk.jpg';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
@@ -13,14 +15,10 @@ import Item from './projectItem';
 
 function Home() {
   const dispatch = useDispatch();
-  const { projects, quotes, isLoading } = useSelector((store) => store.projectList);
+  const { projects, quotes } = useSelector((store) => store.projectList);
   useEffect(() => {
     dispatch(fetchquote());
-    if (isLoading) {
-      return (
-        <p />
-      );
-    }
+
     const form = document.querySelector('.form');
     const email = document.querySelector('#email');
     const name = document.querySelector('#full-name');
@@ -46,23 +44,21 @@ function Home() {
         form.removeEventListener('submit', handleForm);
       };
     }
-    return null;
+    return undefined;
   }, [dispatch]);
-  window.onload = () => {
-    const currenTime = () => {
-      const currentDate = new Date();
-      const year = currentDate.getFullYear();
-      const month = currentDate.getMonth() + 1;
-      const day = currentDate.getDate();
-      const hours = currentDate.getHours();
-      const mins = currentDate.getMinutes();
-      const fullDate = `${year}-${month}-${day} ${hours}:${mins}`;
-      const display = document.querySelector('.time');
-      display.textContent = fullDate;
-    };
 
-    currenTime();
-    setInterval(currenTime, 1000);
+  const forms = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_xg8vjgg', 'template_yf4a5va', forms.current, 'DGVlJqKcoE4rXL6NA')
+      .then((result) => {
+        toast.success('Message successful:ok', result);
+        forms.current.reset();
+      }, (error) => {
+        toast.error('error:', error);
+      });
   };
   return (
     <main>
@@ -245,11 +241,11 @@ function Home() {
           </h2>
         </div>
         <div className="form-right">
-          <form className="form" action="https://formspree.io/f/mjvdlwyk" method="post" id="send">
+          <form ref={forms} onSubmit={sendEmail} id="send">
             <div className="field">
               <input
                 type="text"
-                name="Full-name"
+                name="user_name"
                 id="full-name"
                 placeholder="Full name"
                 maxLength="30"
@@ -260,7 +256,7 @@ function Home() {
             <div className="field">
               <input
                 type="email"
-                name="email-address"
+                name="user_email"
                 id="email"
                 placeholder="Email address"
                 required
@@ -269,7 +265,7 @@ function Home() {
             </div>
             <div className="field">
               <textarea
-                name="comments"
+                name="message"
                 id="textmsg"
                 rows="5"
                 maxLength="500"
