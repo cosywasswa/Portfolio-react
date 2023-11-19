@@ -241,6 +241,10 @@
     margin: auto;
   }
 
+  .resume:hover {
+    transform: scale(1.2) translateY(-10%);
+  }
+
   .resume .res {
     font-size: 25px;
     text-decoration: none;
@@ -266,6 +270,9 @@
     font-family: 'Playfair Display', sans-serif;
     font-weight: 700;
     letter-spacing: normal;
+    background-color: #e75b0a;
+    padding: 10px 10px;
+    width: 95%;
   }
 
   .card-container {
@@ -281,6 +288,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     margin: 1rem;
+  }
+
+  .card-container:hover {
+    transform: translateY(-10px);
   }
 
   .image-div img {
