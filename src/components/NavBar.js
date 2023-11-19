@@ -30,9 +30,9 @@ const NavBar = () => {
   return (
     <header className="head">
       <nav className="nav-head">
-        <h3>Cosmas</h3>
+        <h3>CW</h3>
         <ul className="nav-list">
-          <li><NavLink to="/" className="a1">Home</NavLink></li>
+          <li><NavLink to="#home" className="a1">Home</NavLink></li>
           <li><NavLink to="#about" className="a1"> About</NavLink></li>
           <li><NavLink to="#projects" className="a1">Projects</NavLink></li>
           <li><NavLink to="#contact">Contact</NavLink></li>
@@ -41,7 +41,7 @@ const NavBar = () => {
       </nav>
       <ul className={`nav-list-mob ${isNavActive ? 'active' : ''}`}>
         <FontAwesomeIcon icon={faChevronLeft} className="arrow" onClick={toggleMobileNav} />
-        <li><NavLink to="/" className="a1" onClick={toggleMobileNav}>Home</NavLink></li>
+        <li><NavLink to="#home" className="a1" onClick={toggleMobileNav}>Home</NavLink></li>
         <li><NavLink to="#about" className="a1" onClick={toggleMobileNav}> About</NavLink></li>
         <li><NavLink to="#projects" className="a1" onClick={toggleMobileNav}>Projects</NavLink></li>
         <li><NavLink to="#contact" onClick={toggleMobileNav}>Contact</NavLink></li>
