@@ -109,15 +109,15 @@ function Home() {
           <div className="quote">
             <p><code><span className="time" /></code></p>
             {quotes && quotes[0]
-            && (
-            <p className="quote-p">
-              <FaHandPeace />
-              <code>
-                {quotes[0].quote}
-              </code>
-              <FaHandPeace />
-            </p>
-            )}
+              && (
+                <p className="quote-p">
+                  <FaHandPeace />
+                  <code>
+                    {quotes[0].quote}
+                  </code>
+                  <FaHandPeace />
+                </p>
+              )}
           </div>
         </div>
       </section>
