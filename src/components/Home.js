@@ -84,7 +84,7 @@ function Home() {
               <br />
             </h1>
             <h1 className="myname">
-              I'M
+              I&apos;M
               <strong className="full-names"> Cosmas Wasswa</strong>
             </h1>
           </div>
