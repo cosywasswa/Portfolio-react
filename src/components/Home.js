@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import '@fortawesome/fontawesome-free/css/all.css';
 import emailjs from '@emailjs/browser';
@@ -83,7 +84,7 @@ function Home() {
               <br />
             </h1>
             <h1 className="myname">
-              IAM
+              I'M
               <strong className="full-names"> Cosmas Wasswa</strong>
             </h1>
           </div>
@@ -92,18 +93,14 @@ function Home() {
           <h2>I&apos;m a Full-stack software developer from Uganda</h2>
           <div className="into-p">
             <p>
-              Experienced in crafting web applications using languages like
+              Experienced in crafting web applications using
               <strong className="my-languages">
                 {' '}
-                Ruby on Rails,
-                React, Ruby, JavaScript, HTML5, CSS3, and tailwing CSS
+                React, JavaScript, Tailwind CSS, Node, Express
                 {' '}
               </strong>
-              I enjoy creating websites that work well on any device
+              I enjoy creating websites that work well on all device
               and give users a great experience.
-              Keeping up with new tech is my jam,
-              and I&apos;m dedicated to using my skills to make awesome,
-              top-notch projects that businesses and people love.
             </p>
           </div>
           <div className="quote">
@@ -118,6 +115,14 @@ function Home() {
                   <FaHandPeace />
                 </p>
               )}
+          </div>
+          <div className="home-btn">
+            <div className="resume">
+              <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/export?format=pdf">Get resume</a>
+            </div>
+            <div className="get-contact">
+              <NavLink className='res-link' to="#contact">Get In Touch</NavLink>
+            </div>
           </div>
         </div>
       </section>
@@ -204,9 +209,6 @@ function Home() {
             </div>
             <div className="about-me-img" />
           </div>
-        </div>
-        <div className="resume">
-          <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/export?format=pdf">Download resume</a>
         </div>
       </section>
       <section className="projects-container" id="projects">
