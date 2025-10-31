@@ -96,9 +96,10 @@ function Home() {
               Experienced in crafting web applications using
               <strong className="my-languages">
                 {' '}
-                React, JavaScript, Tailwind CSS, Node, Express
+                React, JavaScript, Tailwind CSS, Node, Express, PostgreSQL, MongoDB, Rails
                 {' '}
               </strong>
+              <br />
               I enjoy creating websites that work well on all device
               and give users a great experience.
             </p>
@@ -121,7 +122,7 @@ function Home() {
               <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/export?format=pdf">Get resume</a>
             </div>
             <div className="get-contact">
-              <NavLink className='res-link' to="#contact">Get In Touch</NavLink>
+              <NavLink className="res-link" to="#contact">Get In Touch</NavLink>
             </div>
           </div>
         </div>
@@ -131,7 +132,7 @@ function Home() {
         <div className="about-container">
           <div className="about-left">
             <div className="details">
-              <p>
+              <p className="my-details">
                 As an innovative Full-stack software developer,
                 I love solving problems and creating great projects.
                 I see challenges as opportunities to grow and improve continuously.
@@ -144,12 +145,12 @@ function Home() {
                 I have managed to build, and deploy more than 30 projects
                 using the different stacks and also acquired numerous certifications
               </p>
-              <p className="stack">
+              <h3 className="stack">
                 <code>
                   Current Tech-stacks
                   <FaHandPointDown className="fa-check-circle" />
                 </code>
-              </p>
+              </h3>
               <div className="technologies-list">
                 <ul className="list-stacks">
                   <div>
@@ -205,6 +206,10 @@ function Home() {
               <i className="devicon-ruby-plain-wordmark colored" />
 
               <i className="devicon-babel-plain" />
+
+              <i className="devicon-nodejs-plain-colored" />
+
+              <i className="devicon-mongodb-plain" />
 
             </div>
             <div className="about-me-img" />

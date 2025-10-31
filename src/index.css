@@ -29,7 +29,7 @@
     height: 755px;
     z-index: 9999;
     padding-top: 2rem;
-    background-color: rgb(36, 33, 33);
+    background-color: black;
     transition: 0.5s;
   }
 
@@ -57,7 +57,6 @@
     color: white;
     line-height: 44px;
     text-align: start;
-    font-family: "Playfair Display", sans-serif;
   }
 
   .nav-head {
@@ -65,7 +64,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    background-color: rgb(85, 77, 82);
+    background-color: rgb(15, 14, 14);
     height: 4rem;
     position: fixed;
     width: 93%;
@@ -73,11 +72,10 @@
 
   .head h3 {
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     font-style: italic;
     background-color: #000308;
     padding: 0 10px;
-    font-family: "Playfair Display", sans-serif;
   }
 
   .bars {
@@ -88,24 +86,22 @@
   .home {
     background-color: rgb(51, 46, 46);
     color: white;
-    padding: 10px 1rem;
-    padding-top: 4rem;
+    padding: 50px 1rem;
+    padding-top: 5rem;
   }
 
   .intro h1 {
     font-size: 28px;
-    font-family: "Playfair Display", sans-serif;
   }
 
   .intro h2 {
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 700;
-    font-family: "Playfair Display", sans-serif;
-    color: rgb(102, 102, 233);
+    color: #227C9D;
   }
 
   .my-languages {
-    color: rgb(102, 102, 233);
+  color: #227C9D;
   }
 
   @keyframes wave-animation {
@@ -137,15 +133,18 @@
   }
 
   .full-names {
-    color: rgb(102, 102, 233);
-    font-size: 35px;
+    color: #227C9D;
+    font-size: 28px;
   }
 
   .into-p {
-    font-size: 25px;
-    font-family: "Titillium Web", sans-serif;
+    font-size: 22px;
     text-align: left;
     padding-bottom: 20px;
+  }
+
+  .get-contact {
+    display: none;
   }
 
   .socials p {
@@ -198,7 +197,7 @@
   }
 
   .details p {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
     font-family: "Titillium Web", sans-serif;
   }
@@ -227,7 +226,6 @@
     margin-left: -3.5rem;
     gap: 10px;
     font-size: 20px;
-    font-family: "Titillium Web", sans-serif;
   }
 
   .fa-check-circle {
@@ -255,7 +253,7 @@
   }
 
   .resume:hover {
-    transform: scale(1.2) translateY(-10%);
+    transform: scale(1.2) translateY(-2%);
   }
 
   .resume .res {
@@ -455,7 +453,7 @@
     width: 150px;
     height: 45px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 20px;
     font-family: "Playfair Display", sans-serif;
   }
 
@@ -558,8 +556,8 @@
     width: 100%;
     background-color: rgb(54, 51, 51);
     gap: 6rem;
-    padding-bottom: 3rem;
-    padding-top: 20px;
+    padding-bottom: 4rem;
+    padding-top: 5rem;
   }
 
   .intro {
@@ -571,6 +569,7 @@
   .myname {
     color: white;
     font-size: 28px;
+    font-style: italic;
   }
 
   .full-names {
@@ -710,7 +709,9 @@
 
   .picture .pic {
     width: 200px;
+    height: 220px;
     margin-left: 5rem;
+    border-radius: 100px;
   }
 
   .round-shape {
@@ -753,14 +754,16 @@
   }
 
   .details p {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 23px;
-    color: white;
+    font-size: 20px;
+    color: rgb(54, 51, 51);
     padding: 0 4rem;
+    text-align: center;
+
   }
 
   .details .stack {
     font-size: 35px;
+     padding: 0 4rem;
   }
 
   .about {
@@ -770,20 +773,23 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: rgb(54, 51, 51);
+    background-color: #fafafa;
     border-top: 1px solid white;
   }
 
   .about h2 {
-    font-size: 35px;
-    font-family: "Playfair Display", sans-serif;
-    color: #e75b0a;
+    font-size: 30px;
+    color: white;
     font-weight: 700;
     text-align: center;
-    background-color: white;
+    background-color: #227C9D;
     max-width: 200px;
     padding: 10px;
     border-radius: 10px;
+  }
+
+  .about h2:hover {
+     background-color: #4690ab;
   }
 
   .about-left {
@@ -801,7 +807,7 @@
   }
 
   .about-right {
-    background-color: rgb(250, 244, 244);
+    background-color: #C3CAD9;
     border-radius: 30px;
     padding: 10px;
   }
@@ -831,7 +837,7 @@
   }
 
   .resume {
-    background-color: #FFCB77;
+    background-color: #e75b0a;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 2rem;
@@ -852,7 +858,7 @@ background-color: #428ea9;
 
   .res-link {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     list-style: none;
     font-weight: 500;
@@ -865,7 +871,7 @@ background-color: #428ea9;
 
   .resume a {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     font-family: "Playfair Display", sans-serif;
     font-weight: 500;
@@ -1076,12 +1082,13 @@ background-color: #428ea9;
     width: 200px;
     height: 40px;
     text-align: center;
+    border-radius: 10px;
   }
 
   form button:hover {
     border-color: #f55800;
-    color: #f55800;
-    background-color: #fff5e1;
+    color: white;
+    background-color: #f55800;
   }
 
   form button:disabled {
@@ -1139,7 +1146,6 @@ background-color: #428ea9;
 
   .footer {
     margin-left: 100px;
-    font-family: "Titillium Web", sans-serif;
     font-size: 18px;
   }
 }
