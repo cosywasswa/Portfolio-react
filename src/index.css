@@ -97,11 +97,11 @@
   .intro h2 {
     font-size: 25px;
     font-weight: 700;
-    color: #227C9D;
+    color: #227c9d;
   }
 
   .my-languages {
-  color: #227C9D;
+    color: #227c9d;
   }
 
   @keyframes wave-animation {
@@ -133,7 +133,7 @@
   }
 
   .full-names {
-    color: #227C9D;
+    color: #227c9d;
     font-size: 28px;
   }
 
@@ -519,6 +519,14 @@
     border-right: 1px solid white;
   }
 
+   .nav-list a:hover {
+    color: #172b4d;
+   }
+
+    .nav-list a:active {
+      color: #172b4d;
+    }
+
   .bars {
     display: none;
   }
@@ -573,35 +581,32 @@
   }
 
   .full-names {
-    color: #227C9D;
+    color: #227c9d;
   }
 
   .my-languages {
-    color: #227C9D;
+    color: #227c9d;
   }
 
   .h1 .hey {
     font-size: 35px;
     color: white;
-    font-family: "Playfair Display", sans-serif;
   }
 
   .intro h2 {
-    color: #227C9D;
+    color: #227c9d;
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid #333;
     margin-top: -12rem;
     font-size: 25px;
-    font-family: "Titillium Web", sans-serif;
     animation: typing 4s steps(40, end) infinite,
-      blink-caret 0.75s step-end infinite;
+      blink-caret 0.95s step-end infinite;
   }
 
   .into-p {
     color: white;
     font-size: 20px;
-    font-family: "Titillium Web", sans-serif;
     font-weight: 400;
   }
 
@@ -758,12 +763,11 @@
     color: rgb(54, 51, 51);
     padding: 0 4rem;
     text-align: center;
-
   }
 
   .details .stack {
     font-size: 35px;
-     padding: 0 4rem;
+    padding: 0 4rem;
   }
 
   .about {
@@ -773,7 +777,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: #fafafa;
+    background-color: #fff;
     border-top: 1px solid white;
   }
 
@@ -782,14 +786,14 @@
     color: white;
     font-weight: 700;
     text-align: center;
-    background-color: #227C9D;
+    background-color: #227c9d;
     max-width: 200px;
     padding: 10px;
     border-radius: 10px;
   }
 
   .about h2:hover {
-     background-color: #4690ab;
+    background-color: #4690ab;
   }
 
   .about-left {
@@ -807,7 +811,7 @@
   }
 
   .about-right {
-    background-color: #C3CAD9;
+    background-color: #c3cad9;
     border-radius: 30px;
     padding: 10px;
   }
@@ -844,7 +848,7 @@
   }
 
   .get-contact {
-     background-color: #227C9D;
+    background-color: #227c9d;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 2rem;
@@ -852,8 +856,8 @@
   }
 
   .get-contact:hover {
-transform: translateX(2%);
-background-color: #428ea9;
+    transform: translateX(2%);
+    background-color: #428ea9;
   }
 
   .res-link {
@@ -1029,7 +1033,6 @@ background-color: #428ea9;
 
   .form-area .creator h2 {
     width: 70%;
-    font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     font-size: 32px;
     font-style: normal;
@@ -1056,7 +1059,6 @@ background-color: #428ea9;
     outline: 0;
     border: 0;
     border-bottom: 1px solid grey;
-    font-family: "Titillium Web", sans-serif;
     width: 100%;
     padding: 15px;
     font-size: 25px;
@@ -1066,7 +1068,6 @@ background-color: #428ea9;
     width: 100%;
     outline: 0;
     border: 0;
-    font-family: "Titillium Web", sans-serif;
     font-style: italic;
     font-size: 25px;
     color: #3c3a39;
@@ -1103,7 +1104,6 @@ background-color: #428ea9;
   }
 
   .field button h5 {
-    font-family: "Titillium Web", sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: #fff;
@@ -1135,11 +1135,14 @@ background-color: #428ea9;
   .devicon-bootstrap-plain-wordmark,
   .devicon-react-original-wordmark,
   .devicon-css3-plain,
-  .devicon-sass-original,
+  .devicon-rails-plain,
   .devicon-redux-original,
   .devicon-javascript-plain,
+  .devicon-mongodb-plain,
+  .devicon-nodejs-plain,
+  .devicon-tailwindcss-plain,
   .devicon-ruby-plain-wordmark {
-    font-size: 100px;
+    font-size: 70px;
     padding-right: 20px;
     z-index: 1;
   }

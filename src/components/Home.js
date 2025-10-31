@@ -160,7 +160,11 @@ function Home() {
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      Ruby / Rails
+                      Redux
+                    </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      Tailwind CSS
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
@@ -170,15 +174,19 @@ function Home() {
                   <div>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      HTML5 / CSS3
+                      NodeJs/Express
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      Tailwind CSS
+                      Ruby / Rails
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
                       PostgreSQL
+                    </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      MongoDB
                     </li>
                   </div>
                 </ul>
@@ -191,26 +199,25 @@ function Home() {
 
               <i className="devicon-postgresql-plain colored" />
 
-              <i className="devicon-bootstrap-plain-wordmark colored" />
+              <i className="devicon-tailwindcss-plain colored" />
 
               <i className="devicon-react-original-wordmark colored" />
 
-              <i className="devicon-css3-plain" />
+              <i className="devicon-css3-plain colored" />
 
-              <i className="devicon-sass-original" />
+              <i className="devicon-rails-plain colored" />
 
-              <i className="devicon-redux-original" />
+              <i className="devicon-redux-original colored" />
 
-              <i className="devicon-javascript-plain" />
+              <i className="devicon-javascript-plain colored" />
 
               <i className="devicon-ruby-plain-wordmark colored" />
 
-              <i className="devicon-babel-plain" />
+              <i className="devicon-babel-plain colored" />
 
-              <i className="devicon-nodejs-plain-colored" />
+              <i className="devicon-nodejs-plain colored" />
 
-              <i className="devicon-mongodb-plain" />
-
+              <i className="devicon-mongodb-plain colored" />
             </div>
             <div className="about-me-img" />
           </div>
