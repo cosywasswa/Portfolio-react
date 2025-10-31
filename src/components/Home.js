@@ -147,7 +147,7 @@ function Home() {
               </p>
               <h3 className="stack">
                 <code>
-                  Current Tech-stacks
+                  Current Tech-stack
                   <FaHandPointDown className="fa-check-circle" />
                 </code>
               </h3>
@@ -174,7 +174,7 @@ function Home() {
                   <div>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      NodeJs/Express
+                      Node/Express
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
