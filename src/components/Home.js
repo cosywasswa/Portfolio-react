@@ -2,9 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { toast } from 'react-toastify';
 import '@fortawesome/fontawesome-free/css/all.css';
 import emailjs from '@emailjs/browser';
+import { MdArrowOutward } from 'react-icons/md';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
 import profile from './images/my pic-bk.jpg';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
@@ -122,7 +124,10 @@ function Home() {
               <a className="res" href="https://docs.google.com/document/d/1oMldrNEUyND5YjjUq67pWXmAWZpw5Za-LD2Z5oHP2_w/export?format=pdf">Get resume</a>
             </div>
             <div className="get-contact">
-              <NavLink className="res-link" to="#contact">Get In Touch</NavLink>
+              <li>
+                <HashLink smooth to="#projects" className="res-link">My Projects</HashLink>
+              </li>
+              <MdArrowOutward className="arrow-contact" />
             </div>
           </div>
         </div>
@@ -174,11 +179,11 @@ function Home() {
                   <div>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      Node/Express
+                      NodeJs
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      Ruby / Rails
+                      Rails
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
@@ -226,7 +231,7 @@ function Home() {
       <section className="projects-container" id="projects">
         <h1 className="proj-title">
           <code>
-            My Recent Projects
+            Recent Projects
           </code>
         </h1>
         <hr />
@@ -281,7 +286,7 @@ function Home() {
               <textarea
                 name="message"
                 id="textmsg"
-                rows="5"
+                rows="3"
                 maxLength="500"
                 placeholder="Write me something..."
                 required
