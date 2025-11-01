@@ -8,6 +8,7 @@ import image6 from '../../components/images/projects/desktop-math.png';
 import image7 from '../../components/images/projects/desktop-todo.png';
 import bookItNow from '../../components/images/projects/bookitnow-desktop.png';
 import budgetBuddy from '../../components/images/projects/budget-desktop.png';
+import cartpairs from '../../components/images/projects/cartpairs.png';
 
 const url = 'https://api.api-ninjas.com/v1/quotes?category=inspirational';
 
@@ -29,6 +30,19 @@ const initialState = {
   projects: [
     {
       id: 1,
+      title: 'Cartpairs',
+      description: 'Cartpairs is a seamless, personalized styling experience by connecting clients with expert stylists who curate outfits tailored to your unique preferences, lifestyle, and fashion goals. Whether you need a wardrobe refresh or event styling, we take the guesswork out of shopping ',
+      image: cartpairs,
+      url1: 'https://cartpairs.com/',
+      url2: 'n/a',
+      languages: {
+        lan1: 'React',
+        lan2: 'Redux',
+        lan3: 'API',
+      },
+    },
+    {
+      id: 2,
       title: 'BookItNow',
       description: 'The BookItnow - is an Online Doctor Reservation web application designed to provide users with the ability to reserve, view, and manage doctors and doctor appointment reservation . The system aims to streamline the process of finding and booking doctors from various locations ',
       image: bookItNow,
@@ -41,7 +55,7 @@ const initialState = {
       },
     },
     {
-      id: 2,
+      id: 3,
       title: 'BudgetBuddy',
       description: 'BudgeBuddy is a fully functioning website that allows a user to fully manage his/her expenses by keeping track of all payments and their related categories. For each category the user can see how much is already spent. A user can add categories and payments related to one or more categories.',
       image: budgetBuddy,
@@ -54,7 +68,7 @@ const initialState = {
       },
     },
     {
-      id: 3,
+      id: 4,
       title: 'Crypto-360',
       description: 'Crypto360 is a web application to display Crypto currencies from the coin cap API user can search for a crypto by name/symbol and the search results will be displayed on top of the list ',
       image: image1,
@@ -67,7 +81,7 @@ const initialState = {
       },
     },
     {
-      id: 4,
+      id: 5,
       title: 'Bookstore Web App',
       description: 'The Bookstore is a React and Redux website that allows users to add a book to the list displays list of books remove a book from the list.',
       image: image4,
@@ -81,7 +95,7 @@ const initialState = {
     },
 
     {
-      id: 5,
+      id: 6,
       title: 'Space travellers hub',
       description: ' Space-travelers-hub is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. Created by Cosmas and Munish.',
       image: image5,
@@ -94,7 +108,7 @@ const initialState = {
       },
     },
     {
-      id: 6,
+      id: 7,
       title: 'Math Magicians Application',
       description: ' "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.',
       image: image6,
@@ -107,7 +121,7 @@ const initialState = {
       },
     },
     {
-      id: 7,
+      id: 8,
       title: 'VIDVIB Movies Dashboard',
       description: ' VidVib is a web application that displays a list of movies from an API. Users can like and add comments to a movie of their preference. Created by Cosmas and Tochi ',
       image: image3,
@@ -120,7 +134,7 @@ const initialState = {
       },
     },
     {
-      id: 8,
+      id: 9,
       title: 'ToDo-List Application',
       description: 'To-Do-List is an application for adding new To-Do-List tasks by use of array of objects. When a user inputs a task items using the input field, it is added to the existing list. The user also can removes a task by use of a delete icon and can also updated the task description',
       image: image7,
@@ -133,7 +147,7 @@ const initialState = {
       },
     },
     {
-      id: 9,
+      id: 10,
       title: 'Save the planet international conference',
       description: ' Save the plannet conference-website is a project for a global conference on climate change and Carbon-Zero It contains two pages i.e the home page and about me page ',
       image: image2,
