@@ -97,11 +97,11 @@
   .intro h2 {
     font-size: 25px;
     font-weight: 700;
-    color: #227c9d;
+    color:white
   }
 
   .my-languages {
-    color: #227c9d;
+    color: white;
   }
 
   @keyframes wave-animation {
@@ -583,7 +583,7 @@
   }
 
   .my-languages {
-    color: #227c9d;
+    color: white;
   }
 
   .h1 .hey {
@@ -592,7 +592,7 @@
   }
 
   .intro h2 {
-    color: #227c9d;
+    color: white;
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid #333;
@@ -761,6 +761,17 @@
     color: rgb(54, 51, 51);
     padding: 0 4rem;
     text-align: center;
+  }
+
+  .my-details {
+     translate: -100%;
+    transition: 1000ms ease;
+    opacity: 0;
+  }
+
+  .my-details.visible {
+    translate: 0;
+    opacity: 1;
   }
 
   .details .stack {
@@ -1162,5 +1173,16 @@
   .footer {
     margin-left: 100px;
     font-size: 18px;
+  }
+
+  .contact-h2 {
+    translate: 200%;
+    transition: 2s ease;
+    opacity: 0;
+  }
+
+  .contact-h2.visible {
+    translate: 0;
+    opacity: 1;
   }
 }

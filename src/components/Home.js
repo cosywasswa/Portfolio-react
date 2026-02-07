@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
@@ -17,8 +17,13 @@ import twitter from './images/SOCIAL1/twitter.svg';
 import Item from './projectItem';
 
 function Home() {
+  const [isAboutVisible, setIsAboutVisible] = useState(false);
+  const [isContactVisible, setIsContactVisible] = useState(false);
   const dispatch = useDispatch();
+  const aboutRef = useRef();
+  const contactRef = useRef();
   const { projects, quotes } = useSelector((store) => store.projectList);
+
   useEffect(() => {
     dispatch(fetchquote());
 
@@ -50,6 +55,34 @@ function Home() {
     return undefined;
   }, [dispatch]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setIsAboutVisible(true);
+        observer.unobserve(entry.target);
+      }
+    });
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setIsContactVisible(true);
+        observer.unobserve(entry.target);
+      }
+    });
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   const forms = useRef();
 
   const sendEmail = (e) => {
@@ -63,6 +96,7 @@ function Home() {
         toast.error('error:', error);
       });
   };
+
   return (
     <main>
       <section className="home" id="home">
@@ -137,7 +171,7 @@ function Home() {
         <div className="about-container">
           <div className="about-left">
             <div className="details">
-              <p className="my-details">
+              <p className={`my-details ${isAboutVisible ? 'visible' : ''}`} ref={aboutRef}>
                 As an innovative Full-stack software developer,
                 I love solving problems and creating great projects.
                 I see challenges as opportunities to grow and improve continuously.
@@ -254,7 +288,7 @@ function Home() {
       </section>
       <section className="form-area" id="contact">
         <div className="creator">
-          <h2>
+          <h2 ref={contactRef} className={`contact-h2 ${isContactVisible ? 'visible' : ''}`}>
             I&apos;m always interested in hearing about new projects, so if you would
             like to chat please get in touch.
           </h2>
