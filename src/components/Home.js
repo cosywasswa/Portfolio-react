@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
+import { LuPhoneCall } from 'react-icons/lu';
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { toast } from 'react-toastify';
@@ -335,6 +336,10 @@ function Home() {
         </div>
       </section>
       <div className="footer">
+        <div className="caller-div">
+          <LuPhoneCall />
+          <p>+256775487125 +256757123505</p>
+        </div>
         <p>Copyright © Cosmas Wasswa 2023 All rights Reserved</p>
       </div>
     </main>

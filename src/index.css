@@ -1,6 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap");
 
+:root {
+	--chat--color--primary: #227c9d;
+	--chat--color--primary-shade-50: #227c9d;
+	--chat--color--primary--shade-100: #227c9d;
+	--chat--color--secondary: #e75b0a;
+	--chat--color-secondary-shade-50: #e75b0a;
+	--chat--color-white: #fff;
+	--chat--color-light: #f2f4f8;
+	--chat--color-light-shade-50: #e6e9f1;
+	--chat--color-light-shade-100: #c2c5cc;
+	--chat--color-medium: #d2d4d9;
+	--chat--color-dark: #101330;
+	--chat--color-disabled: #d2d4d9;
+	--chat--color-typing: #404040;
+}
+
 @media only screen and (max-width: 768px) {
   body {
     margin: 0;
@@ -487,6 +503,14 @@
   }
 }
 
+.caller-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    color: rgb(69, 68, 68);
+  }
+
 @media only screen and (min-width: 768px) {
   body {
     margin: 0;
@@ -848,7 +872,7 @@
   }
 
   .resume {
-    background-color: #e75b0a;
+    background-color: white;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 2rem;
@@ -893,7 +917,7 @@
   }
 
   .resume a {
-    color: white;
+    color: #227c9d;
     font-size: 18px;
     text-decoration: none;
     font-family: "Playfair Display", sans-serif;
@@ -1184,5 +1208,13 @@
   .contact-h2.visible {
     translate: 0;
     opacity: 1;
+  }
+
+  .caller-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    color: rgb(69, 68, 68);
   }
 }
