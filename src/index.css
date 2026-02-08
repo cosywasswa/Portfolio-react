@@ -1200,7 +1200,7 @@
   }
 
   .contact-h2 {
-    translate: 200%;
+    translate: -100%;
     transition: 2s ease;
     opacity: 0;
   }
