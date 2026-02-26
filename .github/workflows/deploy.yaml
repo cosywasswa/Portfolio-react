@@ -1,0 +1,32 @@
+name: Deployment to Ubuntu server
+
+on:
+  push: 
+    branches:
+      - develop
+
+jobs:
+  build: 
+    runs-on: Ubuntu-latest
+    steps:
+      - name: checkout source
+        uses: actions/checkout@v4
+      - name: Login to Docker hub
+        run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+      - name: Build the image
+        run: docker build -t cosywasswa/portfolio:client .
+      - name: Push Image To Docker hub
+        run: docker push cosywasswa/portfolio:client
+
+  Deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull image from hub
+        run: docker pull cosywasswa/portfolio:client
+      - name: Stop and remove old container
+        run: |
+          docker stop portfolio || true
+          docker rm portfolio || true
+      - name: Run the container
+        run: docker run -d -p 5000:5000 --name portfolio cosywasswa/portfolio:client              
