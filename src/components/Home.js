@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import emailjs from '@emailjs/browser';
 import { MdArrowOutward } from 'react-icons/md';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
-import profile from './images/my-profile.png';
+import profile from './images/profpict.jpg';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
 import angel from './images/SOCIAL1/angel.svg';
 import github from './images/SOCIAL1/github.svg';
