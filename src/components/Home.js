@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import '@fortawesome/fontawesome-free/css/all.css';
 import emailjs from '@emailjs/browser';
 import { MdArrowOutward } from 'react-icons/md';
+import CountUp from 'react-countup';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
 import profile from './images/profpict.jpg';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
@@ -99,50 +100,50 @@ function Home() {
 
   return (
     <main>
-      <section className="home" id="home">
-        <div className="picture">
-          <div className="icons">
-            <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
-            <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer"><img src={linkedin} alt="Linkedln" /></a>
-            <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer"><img src={medium} alt="Medium" /></a>
-            <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer"><img src={angel} alt="Wellfound" /></a>
-            <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" /></a>
+      <section className="main-home">
+        <section className="home" id="home">
+          <div className="picture">
+            <div className="icons">
+              <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
+              <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer"><img src={linkedin} alt="Linkedln" /></a>
+              <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer"><img src={medium} alt="Medium" /></a>
+              <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer"><img src={angel} alt="Wellfound" /></a>
+              <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" /></a>
+            </div>
+            <img src={profile} alt="" className="pic" />
           </div>
-          <img src={profile} alt="" className="pic" />
-        </div>
-        <div className="intro">
-          <div className="h1">
-            <h1 className="hey">
-              Hey There
-              <span className="waving">
-                👋🏻
-              </span>
-              <br />
-            </h1>
-            <h1 className="myname">
-              I&apos;M
-              <strong className="full-names"> Cosmas Wasswa</strong>
-            </h1>
-          </div>
-          <div className="round-shape" />
-          <div className="round-shape2" />
-          <h2>I&apos;m a Full-stack software developer from Uganda</h2>
-          <div className="into-p">
-            <p>
-              Experienced in crafting web applications using
-              <strong className="my-languages">
-                {' '}
-                React, JavaScript, Tailwind CSS, Node, Express, PostgreSQL, MongoDB, Rails
-                {' '}
-              </strong>
-              <br />
-              I enjoy creating websites that work well on all device
-              and give users a great experience.
-            </p>
-          </div>
-          <div className="quote">
-            <p><code><span className="time" /></code></p>
-            {quotes && quotes[0]
+          <div className="intro">
+            <div className="h1">
+              <h1 className="hey">
+                Hey There
+                <span className="waving">
+                  👋🏻
+                </span>
+                <br />
+              </h1>
+              <h1 className="myname">
+                I&apos;M
+                <strong className="full-names"> Cosmas Wasswa</strong>
+              </h1>
+            </div>
+            <div className="round-shape" />
+            <h2>I&apos;m a Full-stack software developer from Uganda</h2>
+            <div className="into-p">
+              <p>
+                Experienced in crafting web applications using
+                <strong className="my-languages">
+                  {' '}
+                  React, JavaScript, Tailwind CSS, Node, Express, PostgreSQL, MongoDB, Rails
+                  {' '}
+                </strong>
+                <br />
+                I enjoy creating websites that work well on all device
+                and give users a great experience.
+              </p>
+            </div>
+            <div className="quote">
+              <p><code><span className="time" /></code></p>
+              {quotes && quotes[0]
               && (
                 <p className="quote-p">
                   <FaHandPeace />
@@ -152,17 +153,34 @@ function Home() {
                   <FaHandPeace />
                 </p>
               )}
+            </div>
+            <div className="home-btn">
+              <div className="resume">
+                <a className="res" href="https://docs.google.com/document/d/1Lo5UdTI9tRSzFAf-35ZzsWHwl0d0G9i9/export?format=pdf">Get resume</a>
+              </div>
+              <div className="get-contact">
+                <li>
+                  <HashLink smooth to="#projects" className="res-link">My Projects</HashLink>
+                </li>
+                <MdArrowOutward className="arrow-contact" />
+              </div>
+            </div>
           </div>
-          <div className="home-btn">
-            <div className="resume">
-              <a className="res" href="https://docs.google.com/document/d/1Lo5UdTI9tRSzFAf-35ZzsWHwl0d0G9i9/export?format=pdf">Get resume</a>
-            </div>
-            <div className="get-contact">
-              <li>
-                <HashLink smooth to="#projects" className="res-link">My Projects</HashLink>
-              </li>
-              <MdArrowOutward className="arrow-contact" />
-            </div>
+        </section>
+        <div className="count-container">
+          <div className="count-div1">
+            <h1>
+              <CountUp start={0} end={3} delay={1} />
+              <span>+</span>
+            </h1>
+            <p>Years Of Experience</p>
+          </div>
+          <div className="count-div2">
+            <h1>
+              <CountUp start={0} end={35} delay={2} />
+              <span>+</span>
+            </h1>
+            <p>Projects Completed</p>
           </div>
         </div>
       </section>

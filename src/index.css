@@ -586,7 +586,6 @@
     width: 100%;
     background-color: #151515;
     gap: 6rem;
-    padding-bottom: 4rem;
     padding-top: 5rem;
   }
 
@@ -913,7 +912,7 @@
 
   .resume:hover {
     transform: translateY(-2%);
-    background-color: #cfae79;
+    background-color: #e5e0d9;
   }
 
   .resume a {
@@ -1216,5 +1215,41 @@
     align-items: center;
     gap: 3px;
     color: rgb(69, 68, 68);
+  }
+
+  .main-home {
+    background-color: #151515;
+    padding-bottom: 10px;
+  }
+  .count-container {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  .count-div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .count-div2 {
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .count-container p {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .count-container h1 {
+    margin: 0;
+
   }
 }
