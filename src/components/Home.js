@@ -157,7 +157,7 @@ function Home() {
             </div>
             <div className="home-btn">
               <div className="resume">
-                <a className="res" href="https://docs.google.com/document/d/1Lo5UdTI9tRSzFAf-35ZzsWHwl0d0G9i9/export?format=pdf">Get resume</a>
+                <a className="res" href="https://docs.google.com/document/d/1mClDhoeCog2GU7OSaIb2oWOd_9P9sLRR/export?format=pdf">Get resume</a>
               </div>
               <div className="get-contact">
                 <li>
