@@ -659,7 +659,7 @@
   }
 
   .h1 .hey {
-    font-size: 35px;
+    font-size: 30px;
     color: rgb(200, 193, 193);
   }
 
@@ -676,8 +676,9 @@
 
   .into-p {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
+    letter-spacing: 0.8px;
   }
 
   .time {
@@ -831,8 +832,8 @@
   .details p {
     font-size: 20px;
     color: rgb(54, 51, 51);
-    padding: 0 4rem;
-    text-align: center;
+    padding-right: 10px;
+    text-align: left;
   }
 
   .my-details {
@@ -848,31 +849,52 @@
 
   .details .stack {
     font-size: 35px;
-    padding: 0 4rem;
   }
 
   .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
-    padding: 1rem;
     background-color: #fff;
     border-top: 1px solid white;
   }
 
+ .about h1 {
+  margin-left: 7rem;
+  background-color: #172b4d;
+  color: white;
+  max-width: 200px;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border-style: solid;
+  border-color: #172b4d;
+  border-width: 2px 4px 2px 2px;
+  position: relative;
+}
+
+.about h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+
+  width: 0;
+  height: 0;
+
+  border-left: 12px solid transparent;
+  border-top: 12px solid #172b4d;
+}
+
   .about h2 {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 700;
-    text-align: center;
-    max-width: 200px;
-    padding: 5px;
-    border-radius: 10px;
+    padding-left: 7rem;
   }
 
   .about h2:hover {
-    background-color: #4690ab;
+    color: rgb(57, 56, 56);
   }
 
   .about-left {
@@ -900,10 +922,6 @@
     background-color: rgb(181, 177, 177);
   }
 
-  .technologies-list {
-    margin-left: 20px;
-  }
-
   .list-stacks {
     list-style: none;
     color: rgb(102, 102, 233);
@@ -911,7 +929,7 @@
     grid-template-columns: repeat(2, 1fr);
     width: 50%;
     font-size: 20px;
-    font-family: "Titillium Web", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
   .fa-check-circle {
@@ -920,9 +938,10 @@
   }
 
   .resume {
-    background-color: white;
+    background-color: black;
+    border: 2px solid white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 100px;
     margin-bottom: 2rem;
   }
 
@@ -931,9 +950,11 @@
     justify-content: center;
     align-items: center;
     gap: 3px;
-    background-color: #227c9d;
+    box-shadow: #428ea9;
+    background-color: black;
+    border: 2px solid #227c9d;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 100px;
     margin-bottom: 2rem;
     color: white;
   }

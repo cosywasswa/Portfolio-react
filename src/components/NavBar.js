@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import logo from './images/my-logo.png';
+import logo from './images/logo-final.png';
 
 const NavBar = () => {
   const [isNavActive, setIsNavActive] = useState(false);

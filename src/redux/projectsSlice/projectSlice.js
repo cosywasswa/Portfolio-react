@@ -33,7 +33,7 @@ const initialState = {
       title: 'Cartpairs',
       description: 'Cartpairs is a seamless, personalized styling experience by connecting clients with expert stylists who curate outfits tailored to your unique preferences, lifestyle, and fashion goals. Whether you need a wardrobe refresh or event styling, we take the guesswork out of shopping ',
       image: cartpairs,
-      url1: 'https://cartpairs.com/',
+      url1: 'https://test.cartpairs.com/',
       url2: 'n/a',
       languages: {
         lan1: 'React',

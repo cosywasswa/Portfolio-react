@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser';
 import { MdArrowOutward } from 'react-icons/md';
 import CountUp from 'react-countup';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
-import profile from './images/profpict.jpg';
+import profile from './images/new-profile.png';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
 import angel from './images/SOCIAL1/angel.svg';
 import github from './images/SOCIAL1/github.svg';
@@ -186,6 +186,7 @@ function Home() {
         </div>
       </section>
       <section className="about" id="about">
+        <h1>Who Iam</h1>
         <h2>About me</h2>
         <div className="about-container">
           <div className="about-left">
@@ -228,6 +229,10 @@ function Home() {
                       <i className="fa fa-check-circle" aria-hidden="true" />
                       JavaScript
                     </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      Eleven labs
+                    </li>
                   </div>
                   <div>
                     <li>
@@ -237,6 +242,10 @@ function Home() {
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
                       Rails
+                    </li>
+                    <li>
+                      <i className="fa fa-check-circle" aria-hidden="true" />
+                      N8N
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
