@@ -133,7 +133,8 @@ function Home() {
                 Experienced in crafting web applications using
                 <strong className="my-languages">
                   {' '}
-                  React, JavaScript, Tailwind CSS, Node, Express, PostgreSQL, MongoDB, Rails
+                  React, JavaScript, Tailwind CSS, Node, Express, PostgreSQL, MongoDB, Rails,
+                  AI agents, N8N Automations
                   {' '}
                 </strong>
                 <br />
