@@ -127,7 +127,7 @@ function Home() {
               </h1>
             </div>
             <div className="round-shape" />
-            <h2>I&apos;m a Full-stack software developer from Uganda</h2>
+            <h2>A Full-stack software developer</h2>
             <div className="into-p">
               <p>
                 Experienced in crafting web applications using
