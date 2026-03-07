@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import logo from './images/my-logo.png';
 
 const NavBar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
@@ -30,7 +31,9 @@ const NavBar = () => {
   return (
     <header className="head">
       <nav className="nav-head">
-        <h3>CW</h3>
+        <h3>
+          <img src={logo} alt="CW" className="logo" />
+        </h3>
         <ul className="nav-list">
           <li><NavLink to="#home" className="a1">Home</NavLink></li>
           <li><NavLink to="#about" className="a1"> About</NavLink></li>
