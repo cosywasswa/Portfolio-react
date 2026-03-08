@@ -201,8 +201,6 @@ function Home() {
                 people across the globe.
                 My ability to think outside the box and approach problems with
                 innovative solutions is what differentiates me.
-                I have managed to build, and deploy more than 30 projects
-                using the different stacks and also acquired numerous certifications
               </p>
               <h3 className="stack">
                 <code>

@@ -80,7 +80,8 @@
     background-color: #227c9d;
     height: 4rem;
     position: fixed;
-    width: 93%;
+    width: 94%;
+    z-index: 1000;
   }
 
   .head h3 {
@@ -106,6 +107,11 @@
     color: white;
     padding: 50px 1rem;
     padding-top: 4rem;
+    background-image: url('./components/images/new-profile.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 100;
   }
 
   .intro h1 {
@@ -195,6 +201,36 @@
     background-color: #eff2f7;
   }
 
+  .about h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #172b4d;
+  color: white;
+  max-width: 200px;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border-style: solid;
+  border-color: #172b4d;
+  border-width: 2px 4px 2px 2px;
+  position: relative;
+}
+
+.about h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+
+  width: 0;
+  height: 0;
+
+  border-left: 12px solid transparent;
+  border-top: 12px solid #172b4d;
+}
+
   .about h2 {
     text-align: center;
     font-family: "Titillium Web", sans-serif;
@@ -261,11 +297,12 @@
     width: 200px;
     display: flex;
     justify-content: center;
-    padding: 7px;
-    border-radius: 10px;
+    padding-block: 7px;
+    border-radius: 100px;
     margin: auto;
     position: relative;
     top: 5rem;
+   border: 2px solid white;
   }
 
   .resume:hover {
@@ -281,7 +318,6 @@
 
   .projects-container {
     width: 100%;
-    /* background-image: url("./components/images/program-bg.png"); */
     background-color: white;
     background-size: inherit;
     margin: auto;
@@ -566,10 +602,6 @@
     font-family: "Roboto", sans-serif;
   }
 
-  header {
-    width: screen;
-  }
-
   .nav-list-mob {
     display: none;
   }
@@ -615,7 +647,6 @@
   .nav-head h3 {
     font-style: italic;
     font-size: 20px;
-    font-family: "Titillium Web", sans-serif;
   }
 
   .logo {
