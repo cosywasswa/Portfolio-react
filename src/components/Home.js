@@ -130,13 +130,7 @@ function Home() {
             <h2>A Full-stack software developer</h2>
             <div className="into-p">
               <p>
-                Experienced in crafting web applications using
-                <strong className="my-languages">
-                  {' '}
-                  React, JavaScript, Tailwind CSS, Node, Express, PostgreSQL, MongoDB, Rails,
-                  AI agents, N8N Automations
-                  {' '}
-                </strong>
+                Experienced in crafting web applications
                 <br />
                 I enjoy creating websites that work well on all device
                 and give users a great experience.
