@@ -77,19 +77,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    background-color: #227c9d;
-    height: 4rem;
+    height: 3rem;
     position: fixed;
-    width: 94%;
+    width: 93%;
+    border-radius: 200px;
+    margin-left: 2px;
+    margin-top: 5px;
     z-index: 1000;
-  }
-
-  .head h3 {
-    color: white;
-    font-size: 22px;
-    font-style: italic;
-    background-color: #227c9d;
-    padding: 0 10px;
+    background-color: #151515;
   }
 
   .logo {
@@ -99,7 +94,8 @@
 
   .bars {
     color: white;
-    font-size: 25px;
+    font-size: 30px;
+    padding-right: 10px;
   }
 
   .home {
@@ -121,11 +117,8 @@
   .intro h2 {
     font-size: 25px;
     font-weight: 500;
-    color: rgb(200, 193, 193);
-  }
-
-  .my-languages {
-    color: rgb(200, 193, 193);
+    color: white;
+    padding-top: 2rem;
   }
 
   @keyframes wave-animation {
@@ -301,7 +294,7 @@
     border-radius: 100px;
     margin: auto;
     position: relative;
-    top: 5rem;
+    top: 8rem;
    border: 2px solid white;
   }
 
@@ -341,7 +334,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #e7f1e1;
+    background-color: rgb(242, 240, 240);
     border: 1px solid #ddd;
     z-index: 10;
     border-radius: 2%;
@@ -455,12 +448,8 @@
   }
 
   .form-area .creator h2 {
-    font-family: "Playfair Display", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
-    color: #172b4d;
-    line-height: 44px;
     text-align: start;
     margin: 40px auto;
   }
@@ -548,7 +537,7 @@
     padding-bottom: 1rem;
     gap: 2rem;
     position: relative;
-    top: -8rem;
+    top: -5rem;
     margin-bottom: 3rem;
   }
 
@@ -593,6 +582,17 @@
     color: rgb(69, 68, 68);
   }
 
+  .copyright-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .copyright {
+    font-size: 20px;
+  }
+
 @media only screen and (min-width: 768px) {
   body {
     margin: 0;
@@ -616,7 +616,7 @@
   }
 
   .nav-list .a1 {
-    border-right: 1px solid white;
+    border-right: 1px solid #172b4d;
   }
 
    .nav-list a:hover {
@@ -639,7 +639,7 @@
     padding: 0 2rem;
     align-items: center;
     height: 3rem;
-    background-color: #e8e6e6;
+    background-color: #faf8f8;
     color: rgb(26, 25, 25);
     z-index: 10;
     border-radius: 200px;
@@ -701,10 +701,10 @@
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15em solid #333;
-    margin-top: -7rem;
+    margin-top: -5rem;
     font-size: 22px;
     animation: typing 4s steps(40, end) infinite,
-      blink-caret 0.95s step-end infinite;
+    blink-caret 0.95s step-end infinite;
   }
 
   .into-p {
@@ -1359,5 +1359,16 @@
     margin: 0;
     color: #227c9d;
 
+  }
+
+  .copyright-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .copyright {
+    font-size: 20px;
   }
 }

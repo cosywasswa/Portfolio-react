@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import '@fortawesome/fontawesome-free/css/all.css';
 import emailjs from '@emailjs/browser';
 import { MdArrowOutward } from 'react-icons/md';
+import { FaRegCopyright } from 'react-icons/fa6';
 import CountUp from 'react-countup';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
 import profile from './images/new-profile.png';
@@ -359,7 +360,10 @@ function Home() {
           <LuPhoneCall />
           <p>+256775487125 +256757123505</p>
         </div>
-        <p>Copyright © Cosmas Wasswa 2023 All rights Reserved</p>
+        <div className="copyright-div">
+          <span className="copyright"><FaRegCopyright /></span>
+          <p>Cosmas Wasswa 2023 All rights Reserved</p>
+        </div>
       </div>
     </main>
   );
