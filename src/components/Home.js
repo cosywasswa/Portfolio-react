@@ -10,7 +10,7 @@ import { MdArrowOutward } from 'react-icons/md';
 import { FaRegCopyright } from 'react-icons/fa6';
 import CountUp from 'react-countup';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
-import profile from './images/new-profile.png';
+import profile from './images/wasswa.png';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
 import angel from './images/SOCIAL1/angel.svg';
 import github from './images/SOCIAL1/github.svg';
@@ -128,7 +128,7 @@ function Home() {
               </h1>
             </div>
             <div className="round-shape" />
-            <h2>A Full-stack software developer</h2>
+            <h2>A full-stack software developer</h2>
             <div className="into-p">
               <p>
                 Experienced in crafting web applications
