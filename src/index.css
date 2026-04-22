@@ -489,7 +489,7 @@
   }
 
   .field button {
-    background-color: #ff6b00;
+    background-color: #f09e06;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -498,11 +498,11 @@
     height: 45px;
     text-align: center;
     border-radius: 20px;
-    font-family: "Playfair Display", sans-serif;
+    border-color: #f09e06;
   }
 
   form button:hover {
-    border-color: #f55800;
+    border-color: #f8ac20;
     color: #f8ac20;
     background-color: #fff5e1;
   }
@@ -515,11 +515,10 @@
 
   form button:active {
     color: #f4f1f0;
-    background-color: #e05304;
+    background-color:#f8ac20;
   }
 
   .field button h5 {
-    font-family: "Playfair Display", sans-serif;
     font-weight: 700;
     font-size: 20px;
     color: #fff;
@@ -1247,6 +1246,7 @@
     height: 40px;
     text-align: center;
     border-radius: 10px;
+    border-color: #f09e06;
   }
 
   form button:hover {
