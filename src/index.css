@@ -24,6 +24,16 @@
   }
 
   .picture {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    top: 412rem;
+    margin-block: 20px;
+    color: black;
+  }
+
+  .pic {
     display: none;
   }
 
@@ -102,7 +112,7 @@
     background-color: #f09e06;
     color: white;
     padding: 50px 1rem;
-    padding-top: 4rem;
+    padding-top: 10px;
     background-image: url('./components/images/wasswa.png');
     background-position:center;
     background-repeat: no-repeat;
@@ -111,7 +121,8 @@
   }
 
   .intro h1 {
-    font-size: 30px;
+    font-size: 35px;
+    margin-top: -1rem;
   }
 
   .intro h2 {
@@ -150,7 +161,8 @@
 
   .full-names {
     color: #227c9d;
-    font-size: 28px;
+    font-size: 32px;
+    font-weight: 700;
   }
 
   .into-p {
@@ -168,21 +180,15 @@
     margin-top: -20px;
   }
 
-  .socials p {
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    color: #f09e06;
-    font-weight: 700;
-  }
-
   .icons {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     font-size: 35px;
   }
 
   .icons img {
-    height: 23px;
+   background-color:  black;
+   padding: 1px;
   }
 
 
@@ -378,7 +384,7 @@
     margin-right: 5px;
     border-radius: 4px;
     color: white;
-    background-color: rgb(102, 102, 233);
+    background-color: rgb(37, 36, 36);
     padding: 5px 14px;
     font-family: "Playfair Display", sans-serif;
     font-weight: 500;
@@ -535,7 +541,7 @@
     justify-content: center;
     gap: 7rem;
     position: relative;
-    top: -6.5rem;
+    top: -5rem;
     margin-bottom: 3rem;
   }
 
@@ -600,6 +606,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    margin-top: 20px;
   }
 
   .copyright {
@@ -749,14 +756,6 @@
     color: white;
     font-size: 22px;
     font-weight: 500;
-  }
-
-  .time {
-    color: rgb(226, 218, 219);
-    font-size: 20px;
-    position: absolute;
-    top: 120px;
-    right: 20px;
   }
 
   .quote p {
