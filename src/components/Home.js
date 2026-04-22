@@ -8,6 +8,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import emailjs from '@emailjs/browser';
 import { MdArrowOutward } from 'react-icons/md';
 import { FaRegCopyright } from 'react-icons/fa6';
+import { PiHandWavingLight } from 'react-icons/pi';
 import CountUp from 'react-countup';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
 import profile from './images/wasswa.png';
@@ -90,13 +91,22 @@ function Home() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_xg8vjgg', 'template_yf4a5va', forms.current, 'DGVlJqKcoE4rXL6NA')
-      .then((result) => {
-        toast.success('Message successful:ok', result);
-        forms.current.reset();
-      }, (error) => {
-        toast.error('error:', error);
-      });
+    emailjs
+      .sendForm(
+        'service_xg8vjgg',
+        'template_yf4a5va',
+        forms.current,
+        'DGVlJqKcoE4rXL6NA',
+      )
+      .then(
+        (result) => {
+          toast.success('Message successful:ok', result);
+          forms.current.reset();
+        },
+        (error) => {
+          toast.error('error:', error);
+        },
+      );
   };
 
   return (
@@ -105,11 +115,41 @@ function Home() {
         <section className="home" id="home">
           <div className="picture">
             <div className="icons">
-              <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer"><img src={github} alt="Github" /></a>
-              <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer"><img src={linkedin} alt="Linkedln" /></a>
-              <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer"><img src={medium} alt="Medium" /></a>
-              <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer"><img src={angel} alt="Wellfound" /></a>
-              <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" /></a>
+              <a
+                href="https://github.com/cosywasswa"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={github} alt="Github" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/cosmas-wasswa/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={linkedin} alt="Linkedln" />
+              </a>
+              <a
+                href="https://medium.com/@cosywas"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={medium} alt="Medium" />
+              </a>
+              <a
+                href="https://wellfound.com/u/cosmas-waswa"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={angel} alt="Wellfound" />
+              </a>
+              <a
+                href="https://twitter.com/cwasswa"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={twitter} alt="twitter" />
+              </a>
             </div>
             <img src={profile} alt="" className="pic" />
           </div>
@@ -118,7 +158,7 @@ function Home() {
               <h1 className="hey">
                 Hey There
                 <span className="waving">
-                  👋🏻
+                  <PiHandWavingLight />
                 </span>
                 <br />
               </h1>
@@ -127,36 +167,45 @@ function Home() {
                 <strong className="full-names"> Cosmas Wasswa</strong>
               </h1>
             </div>
-            <div className="round-shape" />
-            <h2>A full-stack software developer</h2>
+            <div className="h2-div">
+              <h2>A full-stack software developer</h2>
+            </div>
             <div className="into-p">
               <p>
                 Experienced in crafting web applications
                 <br />
-                I enjoy creating websites that work well on all device
-                and give users a great experience.
+                I enjoy creating websites that work well on all device and
+                give users a great experience.
               </p>
             </div>
             <div className="quote">
-              <p><code><span className="time" /></code></p>
-              {quotes && quotes[0]
-              && (
+              <p>
+                <code>
+                  <span className="time" />
+                </code>
+              </p>
+              {quotes && quotes[0] && (
                 <p className="quote-p">
                   <FaHandPeace />
-                  <code>
-                    {quotes[0].quote}
-                  </code>
+                  <code>{quotes[0].quote}</code>
                   <FaHandPeace />
                 </p>
               )}
             </div>
             <div className="home-btn">
               <div className="resume">
-                <a className="res" href="https://docs.google.com/document/d/1mClDhoeCog2GU7OSaIb2oWOd_9P9sLRR/export?format=pdf">Get resume</a>
+                <a
+                  className="res"
+                  href="https://docs.google.com/document/d/1mClDhoeCog2GU7OSaIb2oWOd_9P9sLRR/export?format=pdf"
+                >
+                  Get resume
+                </a>
               </div>
               <div className="get-contact">
                 <li>
-                  <HashLink smooth to="#projects" className="res-link">My Projects</HashLink>
+                  <HashLink smooth to="#projects" className="res-link">
+                    My Projects
+                  </HashLink>
                 </li>
                 <MdArrowOutward className="arrow-contact" />
               </div>
@@ -166,17 +215,17 @@ function Home() {
         <div className="count-container">
           <div className="count-div1">
             <h1>
-              <CountUp start={0} end={3} delay={1} />
+              <CountUp start={0} end={4} delay={1} />
               <span>+</span>
             </h1>
-            <p>Years Of Experience</p>
+            <p>Experience</p>
           </div>
           <div className="count-div2">
             <h1>
               <CountUp start={0} end={35} delay={2} />
               <span>+</span>
             </h1>
-            <p>Projects Completed</p>
+            <p>Projects</p>
           </div>
         </div>
       </section>
@@ -186,14 +235,16 @@ function Home() {
         <div className="about-container">
           <div className="about-left">
             <div className="details">
-              <p className={`my-details ${isAboutVisible ? 'visible' : ''}`} ref={aboutRef}>
-                As an innovative Full-stack software developer,
-                I love solving problems and creating great projects.
-                I see challenges as opportunities to grow and improve continuously.
-                I&apos;m dedicated to making top-notch solutions that make
-                a real difference in the digital world
-                I have spent all my journey coding collaboratively with different
-                people across the globe.
+              <p
+                className={`my-details ${isAboutVisible ? 'visible' : ''}`}
+                ref={aboutRef}
+              >
+                As an innovative Full-stack software developer, I love solving
+                problems and creating great projects. I see challenges as
+                opportunities to grow and improve continuously. I&apos;m
+                dedicated to making top-notch solutions that make a real
+                difference in the digital world I have spent all my journey
+                coding collaboratively with different people across the globe.
                 My ability to think outside the box and approach problems with
                 innovative solutions is what differentiates me.
               </p>
@@ -224,7 +275,7 @@ function Home() {
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      Eleven labs
+                      Voice agents
                     </li>
                   </div>
                   <div>
@@ -238,7 +289,7 @@ function Home() {
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
-                      N8N
+                      LLM Chatbots
                     </li>
                     <li>
                       <i className="fa fa-check-circle" aria-hidden="true" />
@@ -285,9 +336,7 @@ function Home() {
       </section>
       <section className="projects-container" id="projects">
         <h1 className="proj-title">
-          <code>
-            Recent Projects
-          </code>
+          <code>Recent Projects</code>
         </h1>
         <hr />
         <div className="container">
@@ -309,9 +358,12 @@ function Home() {
       </section>
       <section className="form-area" id="contact">
         <div className="creator">
-          <h2 ref={contactRef} className={`contact-h2 ${isContactVisible ? 'visible' : ''}`}>
-            I&apos;m always interested in hearing about new projects, so if you would
-            like to chat please get in touch.
+          <h2
+            ref={contactRef}
+            className={`contact-h2 ${isContactVisible ? 'visible' : ''}`}
+          >
+            I&apos;m always interested in hearing about new projects, so if you
+            would like to chat please get in touch.
           </h2>
         </div>
         <div className="form-right">
@@ -349,7 +401,9 @@ function Home() {
               <span className="text-error" id="text-error" />
             </div>
             <div className="field">
-              <button type="submit" id="btn"><h5>Get in touch</h5></button>
+              <button type="submit" id="btn">
+                <h5>Get in touch</h5>
+              </button>
               <span className="submit-error" id="submit-error" />
             </div>
           </form>
@@ -361,7 +415,9 @@ function Home() {
           <p>+256775487125 +256757123505</p>
         </div>
         <div className="copyright-div">
-          <span className="copyright"><FaRegCopyright /></span>
+          <span className="copyright">
+            <FaRegCopyright />
+          </span>
           <p>Cosmas Wasswa 2023 All rights Reserved</p>
         </div>
       </div>
