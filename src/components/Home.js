@@ -196,7 +196,7 @@ function Home() {
               <div className="resume">
                 <a
                   className="res"
-                  href="https://docs.google.com/document/d/1mClDhoeCog2GU7OSaIb2oWOd_9P9sLRR/export?format=pdf"
+                  href="https://docs.google.com/document/d/16NtmE3iHF96nb5AbKamaNnzC-b6ltdmy/export?format=pdf"
                 >
                   Get resume
                 </a>
@@ -215,14 +215,14 @@ function Home() {
         <div className="count-container">
           <div className="count-div1">
             <h1>
-              <CountUp start={0} end={4} delay={1} />
+              <CountUp start={0} end={3} delay={1} />
               <span>+</span>
             </h1>
             <p>Experience</p>
           </div>
           <div className="count-div2">
             <h1>
-              <CountUp start={0} end={35} delay={2} />
+              <CountUp start={0} end={30} delay={1} />
               <span>+</span>
             </h1>
             <p>Projects</p>
