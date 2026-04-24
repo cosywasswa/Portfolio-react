@@ -845,6 +845,8 @@
     gap: 30px;
     color: blueviolet;
     font-size: 20px;
+    border-right: 2px solid rgb(226, 223, 223);
+    padding-right: 10px;
   }
 
   .picture {
