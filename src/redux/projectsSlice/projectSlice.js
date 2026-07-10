@@ -1,14 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import image1 from '../../components/images/projects/desktop-crypto.png';
-import image2 from '../../components/images/projects/desktop-planet.png';
 import image3 from '../../components/images/projects/desktop-vidvib.png';
-import image4 from '../../components/images/projects/desktop-bookstore.png';
-import image5 from '../../components/images/projects/desktop-traveller.png';
 import image6 from '../../components/images/projects/desktop-math.png';
 import image7 from '../../components/images/projects/desktop-todo.png';
 import bookItNow from '../../components/images/projects/bookitnow-desktop.png';
 import budgetBuddy from '../../components/images/projects/budget-desktop.png';
 import cartpairs from '../../components/images/projects/cartpairs.png';
+import tutunde from '../../components/images/projects/tutunde.png';
 
 const url = 'https://api.api-ninjas.com/v1/quotes?category=inspirational';
 
@@ -30,6 +27,19 @@ const initialState = {
   projects: [
     {
       id: 1,
+      title: 'Tutunde POS',
+      description: 'Tutunde is a modern Point of sale designed for retail shops and supermakets with capability of working offline and auto async when back online',
+      image: tutunde,
+      url1: 'https://tutunde.com/',
+      url2: 'n/a',
+      languages: {
+        lan1: 'React',
+        lan2: 'Node Js',
+        lan3: 'Postgresql',
+      },
+    },
+    {
+      id: 2,
       title: 'Cartpairs',
       description: 'Cartpairs is a seamless, personalized styling experience by connecting clients with expert stylists who curate outfits tailored to your unique preferences, lifestyle, and fashion goals. Whether you need a wardrobe refresh or event styling, we take the guesswork out of shopping ',
       image: cartpairs,
@@ -42,7 +52,7 @@ const initialState = {
       },
     },
     {
-      id: 2,
+      id: 3,
       title: 'BookItNow',
       description: 'The BookItnow - is an Online Doctor Reservation web application designed to provide users with the ability to reserve, view, and manage doctors and doctor appointment reservation . The system aims to streamline the process of finding and booking doctors from various locations ',
       image: bookItNow,
@@ -55,7 +65,7 @@ const initialState = {
       },
     },
     {
-      id: 3,
+      id: 4,
       title: 'BudgetBuddy',
       description: 'BudgeBuddy is a fully functioning website that allows a user to fully manage his/her expenses by keeping track of all payments and their related categories. For each category the user can see how much is already spent. A user can add categories and payments related to one or more categories.',
       image: budgetBuddy,
@@ -65,19 +75,6 @@ const initialState = {
         lan1: 'Rails',
         lan2: 'PostgreSQL',
         lan3: 'Rspec',
-      },
-    },
-    {
-      id: 4,
-      title: 'Bookstore Web App',
-      description: 'The Bookstore is a React and Redux website that allows users to add a book to the list displays list of books remove a book from the list.',
-      image: image4,
-      url1: 'https://bookstore-app-7x8z.onrender.com/',
-      url2: 'https://github.com/cosywasswa/Bookstore-React',
-      languages: {
-        lan1: 'React',
-        lan2: 'Redux',
-        lan3: 'API',
       },
     },
     {
@@ -91,19 +88,6 @@ const initialState = {
         lan1: 'JavaScript',
         lan2: 'HTML',
         lan3: 'API',
-      },
-    },
-    {
-      id: 6,
-      title: 'Save the planet international conference',
-      description: ' Save the plannet conference-website is a project for a global conference on climate change and Carbon-Zero It contains two pages i.e the home page and about me page ',
-      image: image2,
-      url1: 'https://cosywasswa.github.io/Capstone-Project1/',
-      url2: 'https://github.com/cosywasswa/Capstone-Project1',
-      languages: {
-        lan1: 'JavaScript',
-        lan2: 'HTML',
-        lan3: 'CSS',
       },
     },
   ],

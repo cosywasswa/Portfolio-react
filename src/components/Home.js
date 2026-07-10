@@ -11,7 +11,7 @@ import { FaRegCopyright } from 'react-icons/fa6';
 import { PiHandWavingLight } from 'react-icons/pi';
 import CountUp from 'react-countup';
 import { fetchquote } from '../redux/projectsSlice/projectSlice';
-import profile from './images/wasswa.png';
+import profile from './images/new-profile.png';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
 import angel from './images/SOCIAL1/angel.svg';
 import github from './images/SOCIAL1/github.svg';
@@ -174,7 +174,7 @@ function Home() {
               <p>
                 Experienced in crafting web applications
                 <br />
-                I enjoy creating websites that work well on all device and
+                I enjoy creating AI-Powered web apps that work well on all device and
                 give users a great experience.
               </p>
             </div>
@@ -196,7 +196,7 @@ function Home() {
               <div className="resume">
                 <a
                   className="res"
-                  href="https://docs.google.com/document/d/16NtmE3iHF96nb5AbKamaNnzC-b6ltdmy/export?format=pdf"
+                  href="https://docs.google.com/document/d/1i02BoYplbNeKlRzOCmCfgoJ1NMc7L7x4/export?format=pdf"
                 >
                   Get resume
                 </a>
@@ -240,10 +240,10 @@ function Home() {
                 ref={aboutRef}
               >
                 As an innovative Full-stack software developer, I love solving
-                problems and creating great projects. I see challenges as
+                problems and creating great projects with AI capabilities. I see challenges as
                 opportunities to grow and improve continuously. I&apos;m
                 dedicated to making top-notch solutions that make a real
-                difference in the digital world I have spent all my journey
+                difference in the digital world. I have spent all my journey
                 coding collaboratively with different people across the globe.
                 My ability to think outside the box and approach problems with
                 innovative solutions is what differentiates me.
