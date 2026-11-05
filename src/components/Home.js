@@ -1,16 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { FaHandPointDown, FaHandPeace } from 'react-icons/fa';
+import { useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { LuPhoneCall } from 'react-icons/lu';
 import { HashLink } from 'react-router-hash-link';
 import { toast } from 'react-toastify';
-import '@fortawesome/fontawesome-free/css/all.css';
 import emailjs from '@emailjs/browser';
 import { MdArrowOutward } from 'react-icons/md';
 import { FaRegCopyright } from 'react-icons/fa6';
-import { PiHandWavingLight } from 'react-icons/pi';
 import CountUp from 'react-countup';
-import { fetchquote } from '../redux/projectsSlice/projectSlice';
 import profile from './images/new-profile.png';
 import linkedin from './images/SOCIAL1/Linkedin.svg';
 import angel from './images/SOCIAL1/angel.svg';
@@ -19,77 +15,34 @@ import medium from './images/SOCIAL1/medium.svg';
 import twitter from './images/SOCIAL1/twitter.svg';
 import Item from './projectItem';
 
+const technologies = [
+  'React JS', 'Redux', 'Tailwind CSS', 'JavaScript', 'Node JS',
+  'Rails', 'PostgreSQL', 'MongoDB', 'Voice agents', 'LLM Chatbots',
+];
+
 function Home() {
-  const [isAboutVisible, setIsAboutVisible] = useState(false);
-  const [isContactVisible, setIsContactVisible] = useState(false);
-  const dispatch = useDispatch();
-  const aboutRef = useRef();
-  const contactRef = useRef();
-  const { projects, quotes } = useSelector((store) => store.projectList);
-
-  useEffect(() => {
-    dispatch(fetchquote());
-
-    const form = document.querySelector('.form');
-    const email = document.querySelector('#email');
-    const name = document.querySelector('#full-name');
-    const error = document.querySelector('#submit-error');
-
-    if (form) {
-      const handleForm = (e) => {
-        const mail = email.value;
-        e.preventDefault();
-        if (mail === mail.toLowerCase() && name.value) {
-          form.submit();
-          if (error.querySelector('p')) {
-            error.removeChild(error.querySelector('p'));
-          }
-        } else {
-          const message = document.createElement('p');
-          message.textContent = 'Please fill in name and email in small letters';
-          error.appendChild(message);
-        }
-      };
-      form.addEventListener('submit', handleForm);
-      return () => {
-        form.removeEventListener('submit', handleForm);
-      };
-    }
-    return undefined;
-  }, [dispatch]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setIsAboutVisible(true);
-        observer.unobserve(entry.target);
-      }
-    });
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
-    }
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        setIsContactVisible(true);
-        observer.unobserve(entry.target);
-      }
-    });
-    if (contactRef.current) {
-      observer.observe(contactRef.current);
-    }
-    return () => observer.disconnect();
-  }, []);
+  const [formError, setFormError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const forms = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+
+  const { projects } = useSelector((store) => store.projectList);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const nameValue = nameRef.current?.value.trim();
+    const emailValue = emailRef.current?.value.trim();
+
+    if (!nameValue || !emailValue || emailValue !== emailValue.toLowerCase()) {
+      setFormError('Please fill in your name and a lowercase email address.');
+      return;
+    }
+
+    setFormError('');
+    setIsSubmitting(true);
 
     emailjs
       .sendForm(
@@ -99,246 +52,117 @@ function Home() {
         'DGVlJqKcoE4rXL6NA',
       )
       .then(
-        (result) => {
-          toast.success('Message successful:ok', result);
+        () => {
+          toast.success('Message sent — thanks for reaching out!');
           forms.current.reset();
+          setIsSubmitting(false);
         },
         (error) => {
-          toast.error('error:', error);
+          toast.error(`Something went wrong: ${error?.text || 'please try again.'}`);
+          setIsSubmitting(false);
         },
       );
   };
 
   return (
     <main>
-      <section className="main-home">
-        <section className="home" id="home">
-          <div className="picture">
-            <div className="icons">
-              <a
-                href="https://github.com/cosywasswa"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={github} alt="Github" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/cosmas-wasswa/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={linkedin} alt="Linkedln" />
-              </a>
-              <a
-                href="https://medium.com/@cosywas"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={medium} alt="Medium" />
-              </a>
-              <a
-                href="https://wellfound.com/u/cosmas-waswa"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={angel} alt="Wellfound" />
-              </a>
-              <a
-                href="https://twitter.com/cwasswa"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={twitter} alt="twitter" />
-              </a>
-            </div>
-            <img src={profile} alt="" className="pic" />
+      <section className="home" id="home">
+        <div className="intro">
+          <p className="available">
+            <span className="dot" />
+            Available for work
+          </p>
+          <h1>
+            Hi, I&apos;m
+            {' '}
+            <span className="highlight">Cosmas Wasswa</span>
+          </h1>
+          <h2>Full-stack software developer</h2>
+          <p className="intro-text">
+            I build web applications and AI-powered apps that work well on
+            every device and give users a great experience.
+          </p>
+          <div className="buttons">
+            <HashLink smooth to="#projects" className="btn btn-primary">
+              View Projects
+              <MdArrowOutward />
+            </HashLink>
+            <a
+              className="btn btn-outline"
+              href="https://docs.google.com/document/d/1i02BoYplbNeKlRzOCmCfgoJ1NMc7L7x4/export?format=pdf"
+            >
+              Get Resume
+            </a>
           </div>
-          <div className="intro">
-            <div className="h1">
-              <h1 className="hey">
-                Hey There
-                <span className="waving">
-                  <PiHandWavingLight />
-                </span>
-                <br />
-              </h1>
-              <h1 className="myname">
-                I&apos;M
-                <strong className="full-names"> Cosmas Wasswa</strong>
-              </h1>
-            </div>
-            <div className="h2-div">
-              <h2>A full-stack software developer</h2>
-            </div>
-            <div className="into-p">
-              <p>
-                Experienced in crafting web applications
-                <br />
-                I enjoy creating AI-Powered web apps that work well on all device and
-                give users a great experience.
-              </p>
-            </div>
-            <div className="quote">
-              <p>
-                <code>
-                  <span className="time" />
-                </code>
-              </p>
-              {quotes && quotes[0] && (
-                <p className="quote-p">
-                  <FaHandPeace />
-                  <code>{quotes[0].quote}</code>
-                  <FaHandPeace />
-                </p>
-              )}
-            </div>
-            <div className="home-btn">
-              <div className="resume">
-                <a
-                  className="res"
-                  href="https://docs.google.com/document/d/1i02BoYplbNeKlRzOCmCfgoJ1NMc7L7x4/export?format=pdf"
-                >
-                  Get resume
-                </a>
-              </div>
-              <div className="get-contact">
-                <li>
-                  <HashLink smooth to="#projects" className="res-link">
-                    My Projects
-                  </HashLink>
-                </li>
-                <MdArrowOutward className="arrow-contact" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="count-container">
-          <div className="count-div1">
-            <h1>
-              <CountUp start={0} end={3} delay={1} />
-              <span>+</span>
-            </h1>
-            <p>Experience</p>
-          </div>
-          <div className="count-div2">
-            <h1>
-              <CountUp start={0} end={30} delay={1} />
-              <span>+</span>
-            </h1>
-            <p>Projects</p>
+          <div className="icons">
+            <a href="https://github.com/cosywasswa" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <img src={github} alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/cosmas-wasswa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <img src={linkedin} alt="LinkedIn" />
+            </a>
+            <a href="https://medium.com/@cosywas" target="_blank" rel="noreferrer" aria-label="Medium">
+              <img src={medium} alt="Medium" />
+            </a>
+            <a href="https://wellfound.com/u/cosmas-waswa" target="_blank" rel="noreferrer" aria-label="Wellfound">
+              <img src={angel} alt="Wellfound" />
+            </a>
+            <a href="https://twitter.com/cwasswa" target="_blank" rel="noreferrer" aria-label="Twitter">
+              <img src={twitter} alt="Twitter" />
+            </a>
           </div>
         </div>
+        <div className="picture">
+          <img src={profile} alt="Cosmas Wasswa" className="pic" />
+        </div>
       </section>
+
       <section className="about" id="about">
-        <h1>Who Iam</h1>
-        <h2>About me</h2>
+        <p className="section-label">Who I am</p>
+        <h2 className="section-title">About me</h2>
         <div className="about-container">
-          <div className="about-left">
-            <div className="details">
-              <p
-                className={`my-details ${isAboutVisible ? 'visible' : ''}`}
-                ref={aboutRef}
-              >
-                As an innovative Full-stack software developer, I love solving
-                problems and creating great projects with AI capabilities. I see challenges as
-                opportunities to grow and improve continuously. I&apos;m
-                dedicated to making top-notch solutions that make a real
-                difference in the digital world. I have spent all my journey
-                coding collaboratively with different people across the globe.
-                My ability to think outside the box and approach problems with
-                innovative solutions is what differentiates me.
-              </p>
-              <h3 className="stack">
-                <code>
-                  Current Tech-stack
-                  <FaHandPointDown className="fa-check-circle" />
-                </code>
-              </h3>
-              <div className="technologies-list">
-                <ul className="list-stacks">
-                  <div>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      React JS
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      Redux
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      Tailwind CSS
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      JavaScript
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      Voice agents
-                    </li>
-                  </div>
-                  <div>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      NodeJs
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      Rails
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      LLM Chatbots
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      PostgreSQL
-                    </li>
-                    <li>
-                      <i className="fa fa-check-circle" aria-hidden="true" />
-                      MongoDB
-                    </li>
-                  </div>
-                </ul>
+          <div>
+            <p className="about-text">
+              As an innovative full-stack software developer, I love solving
+              problems and creating great projects with AI capabilities. I see
+              challenges as opportunities to grow and improve continuously.
+              I&apos;m dedicated to making top-notch solutions that make a real
+              difference in the digital world. I have spent my journey coding
+              collaboratively with people across the globe. My ability to think
+              outside the box and approach problems with innovative solutions is
+              what differentiates me.
+            </p>
+            <div className="stats">
+              <div className="stat">
+                <h3>
+                  <CountUp start={0} end={3} delay={1} />
+                  +
+                </h3>
+                <p>Years experience</p>
+              </div>
+              <div className="stat">
+                <h3>
+                  <CountUp start={0} end={30} delay={1} />
+                  +
+                </h3>
+                <p>Projects built</p>
               </div>
             </div>
           </div>
-          <div className="about-right">
-            <div className="icon-div">
-              <i className="devicon-html5-plain-wordmark colored" />
-
-              <i className="devicon-postgresql-plain colored" />
-
-              <i className="devicon-tailwindcss-plain colored" />
-
-              <i className="devicon-react-original-wordmark colored" />
-
-              <i className="devicon-css3-plain colored" />
-
-              <i className="devicon-rails-plain colored" />
-
-              <i className="devicon-redux-original colored" />
-
-              <i className="devicon-javascript-plain colored" />
-
-              <i className="devicon-ruby-plain-wordmark colored" />
-
-              <i className="devicon-babel-plain colored" />
-
-              <i className="devicon-nodejs-plain colored" />
-
-              <i className="devicon-mongodb-plain colored" />
-            </div>
-            <div className="about-me-img" />
+          <div>
+            <h3 className="stack-title">Current tech stack</h3>
+            <ul className="chips">
+              {technologies.map((tech) => (
+                <li key={tech}>{tech}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
+
       <section className="projects-container" id="projects">
-        <h1 className="proj-title">
-          <code>Recent Projects</code>
-        </h1>
-        <hr />
+        <p className="section-label">My work</p>
+        <h2 className="section-title">Recent Projects</h2>
         <div className="container">
           {projects.map((project) => (
             <Item
@@ -356,16 +180,14 @@ function Home() {
           ))}
         </div>
       </section>
+
       <section className="form-area" id="contact">
-        <div className="creator">
-          <h2
-            ref={contactRef}
-            className={`contact-h2 ${isContactVisible ? 'visible' : ''}`}
-          >
-            I&apos;m always interested in hearing about new projects, so if you
-            would like to chat please get in touch.
-          </h2>
-        </div>
+        <p className="section-label">Contact</p>
+        <h2 className="section-title">Let&apos;s work together</h2>
+        <p className="contact-text">
+          I&apos;m always interested in hearing about new projects, so if you
+          would like to chat please get in touch.
+        </p>
         <div className="form-right">
           <form ref={forms} onSubmit={sendEmail} id="send">
             <div className="field">
@@ -373,6 +195,7 @@ function Home() {
                 type="text"
                 name="user_name"
                 id="full-name"
+                ref={nameRef}
                 placeholder="Full name"
                 maxLength="30"
                 required
@@ -384,6 +207,7 @@ function Home() {
                 type="email"
                 name="user_email"
                 id="email"
+                ref={emailRef}
                 placeholder="Email address"
                 required
               />
@@ -401,14 +225,17 @@ function Home() {
               <span className="text-error" id="text-error" />
             </div>
             <div className="field">
-              <button type="submit" id="btn">
-                <h5>Get in touch</h5>
+              <button type="submit" id="btn" disabled={isSubmitting}>
+                <h5>{isSubmitting ? 'Sending...' : 'Get in touch'}</h5>
               </button>
-              <span className="submit-error" id="submit-error" />
+              <span className="submit-error" id="submit-error">
+                {formError && <p>{formError}</p>}
+              </span>
             </div>
           </form>
         </div>
       </section>
+
       <div className="footer">
         <div className="caller-div">
           <LuPhoneCall />
@@ -418,7 +245,12 @@ function Home() {
           <span className="copyright">
             <FaRegCopyright />
           </span>
-          <p>Cosmas Wasswa 2023 All rights Reserved</p>
+          <p>
+            Cosmas Wasswa
+            {new Date().getFullYear()}
+            {' '}
+            All rights Reserved
+          </p>
         </div>
       </div>
     </main>

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import logo from './images/logo-final.png';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
@@ -31,8 +30,9 @@ const NavBar = () => {
   return (
     <header className="head">
       <nav className="nav-head">
-        <h3>
-          <img src={logo} alt="CW" className="logo" />
+        <h3 className="logo">
+          Cosmas
+          <span>.</span>
         </h3>
         <ul className="nav-list">
           <li><NavLink to="#home" className="a1">Home</NavLink></li>
@@ -40,10 +40,13 @@ const NavBar = () => {
           <li><NavLink to="#projects" className="a1">Projects</NavLink></li>
           <li><NavLink to="#contact">Contact</NavLink></li>
         </ul>
-        <FontAwesomeIcon icon={faBars} className="bars" onClick={toggleMobileNav} />
+        <FontAwesomeIcon
+          icon={isNavActive ? faXmark : faBars}
+          className="bars"
+          onClick={toggleMobileNav}
+        />
       </nav>
       <ul className={`nav-list-mob ${isNavActive ? 'active' : ''}`}>
-        <FontAwesomeIcon icon={faChevronLeft} className="arrow" onClick={toggleMobileNav} />
         <li><NavLink to="#home" className="a1" onClick={toggleMobileNav}>Home</NavLink></li>
         <li><NavLink to="#about" className="a1" onClick={toggleMobileNav}> About</NavLink></li>
         <li><NavLink to="#projects" className="a1" onClick={toggleMobileNav}>Projects</NavLink></li>

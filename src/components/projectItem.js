@@ -16,21 +16,24 @@ function projectItem({
         </div>
         <div className="languages">
           <ul className="list">
-            <li><a href="index.html">{lan1}</a></li>
-            <li><a href="index.html">{lan2}</a></li>
-            <li><a href="index.html">{lan3}</a></li>
+            <li>{lan1}</li>
+            <li>{lan2}</li>
+            <li>{lan3}</li>
           </ul>
         </div>
         <div className="visit">
           <ul className="clicks">
             <li>
-              <a href={url1} target="_blank" rel="noopener noreferrer">See live</a>
-              {' '}
-              <FaPlayCircle className="play-icon" />
+              <a href={url1} target="_blank" rel="noopener noreferrer">
+                <FaPlayCircle />
+                See live
+              </a>
             </li>
             <li>
-              <a href={url2} target="_blank" rel="noopener noreferrer">See source</a>
-              <FaGithub className="git-icon" />
+              <a href={url2} target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+                See source
+              </a>
             </li>
           </ul>
         </div>
